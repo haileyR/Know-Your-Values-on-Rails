@@ -1,0 +1,15 @@
+<div class="container">
+  <div id='addedvalues'>
+    <h2> <%= friend.first_name %>'s values </h2>
+    <h3><%= friend.bio %></h3>
+    <%= render partial: 'values/addedvalues', locals: {values: values} %>
+
+  </div>
+
+  <% if values.length > 0 %>
+    <%= render partial: 'values/iffriend', locals: {moreValues: moreValues, friend: friend}%>
+  <% else %>
+    <%= render partial: 'values/ifnotfriend'%>
+  <% end %>
+
+</div>

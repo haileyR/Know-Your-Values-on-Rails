@@ -1,0 +1,221 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+.wrapper {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+}
+.container {
+  width: 90%;
+  height: 100%;
+  text-align: center;
+  margin-left: 5%;
+}
+
+.container #friends{
+  width: 48%;
+  position: relative;
+  float: left;
+  text-align: center;
+  border: 3px solid #B0C4DE;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+}
+.container #profile{
+  width: 48%;
+  position: relative;
+  float: right;
+}
+
+.container #values{
+  text-align: center;
+  border: 3px solid #B0C4DE;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+}
+
+.container #bio{
+  text-align: center;
+  border: 3px solid #B0C4DE;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  margin-bottom: 20px;
+  font-family: 'Abel', sans-serif;
+  color: #1c6551;
+}
+
+.container #bio p{
+  font-family: 'Abel', sans-serif;
+  margin: 20px;
+  color: #1c6551;
+}
+
+.container #values p{
+  font-family: 'Abel', sans-serif;
+  margin: 20px;
+  color: #1c6551;
+}
+
+
+
+.userInfoCont{
+  width: 30%;
+  position: relative;
+  float: right;
+}
+
+header{
+  background-color: white;
+  margin: 10px;
+  height: 110px;
+  border-bottom: 2px solid #B0C4DE;
+}
+
+h1{
+  font-family: 'Lobster', cursive;
+  color: #B0C4DE;
+  position: relative;
+  float: left;
+  font-size: 3em;
+  margin: 20px;
+}
+
+h2{
+  font-family: 'Lobster', cursive;
+  margin: 20px;
+  color: #1c6551;
+  font-size: 2em;
+}
+
+h3{
+  font-family: 'Abel', sans-serif;
+  font-size: 1em;
+}
+
+
+
+#value_words{
+  font-family: 'Abel', sans-serif;
+  font-size: 1.5em;
+  margin: 20px;
+  color: #416C82;
+}
+
+#value_words a {
+
+  text-decoration: none;
+}
+#value_words a:hover {
+  color: #825741;
+  text-decoration: none;
+}
+#value_words a:visited {
+  color: #2D4957;
+  text-decoration: none;
+}
+
+
+#more_value_words{
+  font-family: 'Abel', sans-serif;
+  font-size: 1.5em;
+  margin: 20px;
+}
+
+#more_value_words a {
+  color: #6B3E87;
+  text-decoration: none;
+}
+#more_value_words a:hover {
+  color: #913499;
+  text-decoration: none;
+}
+
+h4{
+  font-family: 'Abel', sans-serif;
+  font-size: 1.5em;
+}
+
+
+input, textarea {
+  line-height: 1em;
+  font-size: 1em;
+  font-family: 'Abel', sans-serif;
+  border: 3px solid #B0C4DE;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+}
+
+button{
+  background: transparent;
+  font-weight: bold;
+  font-size: 1em;
+  text-align: center;
+  border: 1.5px solid #B0C4DE;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  font-family: 'Abel', sans-serif;
+  margin-bottom: 10px;
+}
+
+.unfriend button, .add button{
+  background: transparent;
+  font-weight: bold;
+  font-size: 0.7em;
+  text-align: center;
+  border: 1px solid #B0C4DE;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  font-family: 'Abel', sans-serif;
+}
+
+select{
+  font-family: 'Abel', sans-serif;
+  font-weight: bold;
+  font-size: 1em;
+  border: 1px solid #B0C4DE;
+  background: transparent;
+}
+
+
+a {
+  text-decoration: none;
+}
+
+a:hover {
+  color: #ececec;
+  text-decoration: underline;
+}
+
+ul#friendlist li {
+  position: relative;
+  margin: 10px auto;
+  font-family: 'Abel', sans-serif;
+}
+
+
+ul#friendlist li h3 {
+  position: absolute;
+  bottom: -18px;
+  left: 17px;
+  font-size: 2em;
+}
+ul#friendlist a {
+  font-size: 1.5em;
+  color: #ccc;
+}
+ul#friendlist a:hover {
+}
+

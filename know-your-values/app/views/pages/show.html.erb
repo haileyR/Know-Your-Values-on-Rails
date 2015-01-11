@@ -1,0 +1,30 @@
+<div class="container">
+  <% if current_user %>
+    <div id="friends">
+      <h2>Friends</h2>
+      <button id='friendslistButton' action='/friends' type="submit">All Friends</button>  <button id='friendrequestButton' action='/requests' type="submit">Friend Request</button>
+
+      <form id='search' action='/search' method='GET'>
+        <input type='text' name='email' placeholder='saech by email'>
+        <button type="submit" >Search</button>
+      </form>
+      <ul id='friendlist'><ul>
+    </div>
+
+    <div id='profile'>
+      <div id="bio">
+        <h2>Your Bio</h2>
+        <p contentEditable=true> <%= current_user.bio %> </p>
+        <form id='bioEdit' action='/profile' method='POST'>
+          <input type="hidden" name="_method" value="PUT">
+          <button type="submit" >Save Change</button>
+        </form>
+      </div>
+      <div id="values">
+        <h2>Your values</h2>
+        <p><%= your_values.map {|v|v.word}.join(", ") %></p>
+      </div>
+    </div>
+  <% else %>
+  <% end %>
+</div>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <head>
+    <link href='//fonts.googleapis.com/css?family=Lobster' rel='stylesheet' type='text/css'>
+    <link href='//fonts.googleapis.com/css?family=Abel' rel='stylesheet' type='text/css'>
+
+    <title>KnowYourValues</title>
+    <%= stylesheet_link_tag    'application', media: 'all' %>
+    <%= javascript_include_tag 'application' %>
+    <%= csrf_meta_tags %>
+  </head>
+</head>
+
+  <div class="wrapper">
+    <body>
+      <header>
+        <h1>Know Your Values</h1>
+        <% if current_user %>
+          <%= render 'pages/logedin' %>
+        <% else %>
+          <%= render 'pages/logedout' %>
+        <% end %>
+      </header>
+      <%= yield %>
+    </body>
+  </div>
+</html>
