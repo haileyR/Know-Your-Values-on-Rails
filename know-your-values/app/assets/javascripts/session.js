@@ -49,26 +49,49 @@ $(document).ready(function() {
     $target = $(event.target);
     $.ajax({
       type: $target.children('input[name="_method"]').val(),
-      url: $target.attr('action'),
-      data: {user_id: parseInt($('#userID').val()), friend_id: parseInt($target.children('#friendID').val())}
+      url: $target.attr('action')
     }).done(function(response){
       $('#friends').children('ul').replaceWith(response)
     });
   };
 
 
+  $('#bio').on('click', 'p', function(event){
+    $('#bioEdit').text('Save Change');
+  });
 
-
-  $('#bio').on('submit', '#bioEdit', function(event){
+  $('#friend_page_add').on('submit', 'add_back_button', function(event){
     event.preventDefault();
     $target = $(event.target);
-    $target.children('button').text('Saving...');
+    $.ajax({
+      type: $target.children('input[name="_method"]').val(),
+      url: $target.attr('action')
+    }).done(function(response){
+      $('#friend_page_add').text('request sent')
+    });
+  });
+
+  $('#friend_page_add').on('click', 'send_request_button', function(event){
+    event.preventDefault();
+    $target = $(event.target);
+    $.ajax({
+      type: $target.children('input[name="_method"]').val(),
+      url: $target.attr('action')
+    }).done(function(response){
+      $target.text('request sent')
+    });
+  });
+
+  $('#bio').on('click', '#bioEdit', function(event){
+    event.preventDefault();
+    $target = $(event.target);
+    $target.text('Saving...');
     $.ajax({
       type: 'PUT',
       url: $target.attr('action'),
       data: {user_id: parseInt($('#userID').val()), newbio: $target.siblings('p').text()}
     }).done(function(response){
-      $target.children('button').text('Saved');
+      $target.text('Saved');
     });
   });
 
