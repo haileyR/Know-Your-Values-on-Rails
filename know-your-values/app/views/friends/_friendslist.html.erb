@@ -2,12 +2,9 @@
   <% friends.each do |friend| %>
     <% if friend.id != current_user.id %>
       <li>
-        <a href="/friends/<%= friend.id %>"><%= friend.first_name %> <%= friend.last_name %></a>
-        <form class='<%= button %>' action='/friends/<%= friend.id %>' method='POST'>
-          <input type="hidden" name="_method" value="<%= button=="add" ? "PUT" : "DELETE" %>">
-          <input id='friendID' type="hidden" value=<%= friend.id %>>
-          <button type="submit" ><%= button %></button>
-        </form>
+        <a href='/friends/<%= friend.id %>'><%= friend.first_name %> <%= friend.last_name %></a>
+
+        <%= button_to button, friend_path(friend), method: (button == 'add' ? :put : :delete), class: button %>
 
       </li>
     <% end %>

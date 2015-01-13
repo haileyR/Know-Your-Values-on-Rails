@@ -16,8 +16,8 @@ $(document).ready(function() {
 
   $('#friends').on('click', '#friendslistButton', friendsAjaxCall);
   $('#friends').on('click', '#friendrequestButton', friendsAjaxCall);
-  $('#friends').on('submit', '.unfriend', friendsEditAjaxCall);
-  $('#friends').on('submit', '.add', friendsEditAjaxCall);
+  $('#friends').on('submit', '.button_to', friendsEditAjaxCall);
+
   $('#friend_page_add').on('submit', '.add', friendsEditAjaxCall);
 
   $('#friends').on('submit', '#search', function(event){
