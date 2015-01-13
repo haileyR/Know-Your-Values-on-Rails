@@ -2,14 +2,11 @@
   <h3>click to add to <%= friend.first_name %>'s value list</h3>
   <%= render partial: 'values/possiblevalues', locals: {moreValues: moreValues, friend: friend} %>
 
-  <form id='morevalue_form' action='/friend/<%= friend.id %>values' method='GET' >
-    <button type="submit">More Values</button>
-  </form>
+  <%= button_tag 'More Values',  method: :get, action: "/friend/#{friend.id}/values", id: 'morevalue_button' %>
 
-  <form id='addvalue_form' action='/friend/<%= friend.id %>/addvalue' method='POST'>
-    <input type='hidden' name='friend_id' value='<%= friend.id %>'>
-    <input type='text' name='word' placeholder='value'>
-    <button type="submit" >  add</button>
-  </form>
+  <%= form_tag(("/friends/#{friend.id}/addvalue"), method: :post, id: 'addvalue_form') do %>
+    <%= text_field_tag :word, nil, placeholder: 'value' %>
+    <%= submit_tag 'add' %>
+  <% end %>
 
 </div>
