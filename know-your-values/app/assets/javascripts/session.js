@@ -1,6 +1,5 @@
 $(document).ready(function() {
   $('header').on('click', '#registerNow', logInOutAjaxCall);
-  // $('header').on('submit', '#register', logInOutAjaxCall);
 
   function logInOutAjaxCall(event){
     event.preventDefault();

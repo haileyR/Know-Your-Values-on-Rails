@@ -149,6 +149,48 @@ h4{
 }
 
 
+
+
+.button_to input{
+  background: transparent;
+  font-weight: bold;
+  font-size: 1em;
+  text-align: center;
+  border: 1.5px solid #B0C4DE;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  font-family: 'Abel', sans-serif;
+  margin-bottom: 10px;
+  padding: 5px;
+
+}
+
+#search input{
+  background: transparent;
+  font-weight: bold;
+  font-size: 1em;
+  text-align: center;
+  border: 1.5px solid #B0C4DE;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  font-family: 'Abel', sans-serif;
+  margin-bottom: 10px;
+}
+
+
+
+#friendlist .button_to input{
+  background: transparent;
+  font-weight: bold;
+  font-size: 0.8em;
+  text-align: center;
+  border: 1px solid #B0C4DE;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  font-family: 'Abel', sans-serif;
+}
+
+
 input, textarea {
   line-height: 1em;
   font-size: 1em;
@@ -168,17 +210,6 @@ button{
   -moz-border-radius: 4px;
   font-family: 'Abel', sans-serif;
   margin-bottom: 10px;
-}
-
-.unfriend button, .add button{
-  background: transparent;
-  font-weight: bold;
-  font-size: 0.7em;
-  text-align: center;
-  border: 1px solid #B0C4DE;
-  -webkit-border-radius: 4px;
-  -moz-border-radius: 4px;
-  font-family: 'Abel', sans-serif;
 }
 
 select{
