@@ -17,6 +17,7 @@ class FriendsController < ApplicationController
 
   def show
     ship = Friendship.find_by(user_id: current_user.id, friend_id: params[:id])
+    request_received = Friendship.find_by(user_id: params[:id], friend_id: current_user.id) != nil
     if ship && ship.status
       friend = User.find(params[:id])
       moreValues = Value.all.shuffle[0..50]

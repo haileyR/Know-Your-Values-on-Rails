@@ -9,7 +9,7 @@
   <% if values.length > 0 %>
     <%= render partial: 'values/iffriend', locals: {moreValues: moreValues, friend: friend}%>
   <% else %>
-    <%= render partial: 'values/ifnotfriend', locals: {friend: friend}%>
+    <%= render partial: 'values/ifnotfriend', locals: {friend: friend, request_received: request_received}%>
   <% end %>
 
 </div>
