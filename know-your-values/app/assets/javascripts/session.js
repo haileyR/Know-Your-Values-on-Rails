@@ -124,16 +124,16 @@ $(document).ready(function() {
     });
   });
 
-  $('#morevalue_form').on('submit', function(event){
+  $('#morevalue_button').on('click', function(event){
     event.preventDefault();
     $target = $(event.target)
-    $target.children('button').text('Loading...');
+    $target.text('Loading...');
     $.ajax({
       type: 'GET',
       url: location.pathname+'/values'
     }).done(function(response){
       $target.siblings('p').replaceWith(response);
-      $target.children('button').text('More Values');
+      $target.text('More Values');
     });
   });
 
