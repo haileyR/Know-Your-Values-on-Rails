@@ -28,7 +28,7 @@ $(document).ready(function() {
       data: $target.serialize()
     }).done(function(response){
       $('#friends').children('ul').replaceWith(response);
-      $target.children('input').val("");
+      $target.children('input[name="email"]').val("");
     });
   });
 
