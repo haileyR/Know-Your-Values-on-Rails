@@ -27,15 +27,27 @@ class PagesController < ApplicationController
     render partial: 'register'
   end
 
-  def new_register
-    user = User.create(params[:user])
-    user.update(bio: "Edit bio...")
-    session[:user_id] = user.id
-    redirect_to '/'
+  def login_box
+    render partial: 'logedout'
   end
 
   def logout
     session[:user_id] = nil
     redirect_to '/'
   end
+
+  def new_register
+    user = User.create(user_params)
+    user.update(bio: "Edit bio...")
+    session[:user_id] = user.id
+    redirect_to '/'
+  end
+
+
+private
+  def user_params
+    params.require(:user).permit(:first_name, :last_name, :email, :password, :salt, :encrypted_password)
+  end
+
+
 end

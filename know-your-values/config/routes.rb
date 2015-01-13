@@ -18,6 +18,7 @@ Rails.application.routes.draw do
   get '/search', to: 'friends#search'
   get '/requests', to: 'friends#requests'
   post '/login', to: 'pages#login'
+  get '/login', to: 'pages#login_box'
   get '/register', to: 'pages#register'
   post '/register', to: 'pages#new_register'
   get '/logout', to: 'pages#logout'
