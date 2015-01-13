@@ -23,7 +23,7 @@ Rails.application.routes.draw do
   get '/logout', to: 'pages#logout'
   put '/profile', to: 'pages#profile'
   post '/friends/:id/addvalue', to: 'values#add'
-  get '/friend/:id/values', to: 'values#show'
+  get '/friends/:id/values', to: 'values#show'
 
   # Example resource route with options:
     # resources :friends do
