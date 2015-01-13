@@ -1,18 +1,11 @@
 <div id='friend_page_add'>
-
-  <form class='add' action='/friends/<%= friend.id %>' method='POST'>
-    <input type="hidden" name="_method" value="PUT">
-    <input id='friendID' type="hidden" value=<%= friend.id %>>
-    <button type="submit" >add <%= friend.first_name %> to give values</button>
-  </form>
-
   <% if request_received %>
     <h3><%= friend.first_name %> added you.</h3>
     <h3>Add back to give values.</h3><br>
 
     <%= button_to "add", friend_path(friend), method: :put, id: 'add_back_button' %>
   <% else %>
-    <%= button_tag "add #{friend.first_name} to give values",  method: :put, action: "/friend/#{friend.id}", id: 'send_request_button' %>
+    <%= button_tag "add #{friend.first_name} to give values",  method: :post, action: "/friend/#{friend.id}", id: 'send_request_button' %>
 
   <% end %>
 
