@@ -2,7 +2,8 @@
   include IndexHelper
   def show
     moreValues = Value.all.shuffle[0..50]
-    render partial: '/values/possiblevalues', locals: {moreValues: moreValues}
+    friend = User.find(params[:id])
+    render partial: '/values/possiblevalues', locals: {moreValues: moreValues, friend: friend}
   end
 
 
