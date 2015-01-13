@@ -25,19 +25,20 @@ class FriendsController < ApplicationController
       render '/values/friendvalues', locals: {friend: friend, values: values, moreValues: moreValues}
     else
       friend = User.find(params[:id])
-      render '/values/friendvalues', locals: {friend: friend, values: [], moreValues: []}
+      values = UserValue.values_of_user(params[:id])
+      render '/values/friendvalues', locals: {friend: friend, values: [], moreValues: [], request_received: request_received}
     end
   end
 
   def update
-    Friendship.create(user_id: current_user.id, friend_id: params[:friend_id])
-    friends = []
+    Friendship.create(user_id: current_user.id, friend_id: params[:id])
+    friends = Friendship.friend_requests(current_user.id)
     render partial: 'friends/friendslist', locals: {friends: friends, button: "add"}
   end
 
   def destroy
-    my_friendship = Friendship.find_by(user_id: current_user.id, friend_id: params[:friend_id]).destroy
-    fri_friendship = Friendship.find_by(user_id: params[:friend_id], friend_id: current_user.id).destroy
+    my_friendship = Friendship.find_by(user_id: current_user.id, friend_id: params[:id]).destroy
+    fri_friendship = Friendship.find_by(user_id: params[:id], friend_id: current_user.id).destroy
 
     friends = Friendship.friends(current_user.id)
 
