@@ -6,6 +6,6 @@
      <%= f.text_field :password, placeholder: 'password', type: 'password' %>
      <%= f.submit 'Login' %>
    <% end %>
-   <button id='registerNow' action='/register' method='GET' type="submit">Register Now</button>
+   <%= button_tag "Register Now",  action: '/register', method: :get, id: 'registerNow' %>
 
 </div>

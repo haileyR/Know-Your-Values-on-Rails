@@ -1,9 +1,11 @@
 $(document).ready(function() {
-  $('header').on('click', '#registerNow', logInOutAjaxCall);
+  $('.userInfoCont').on('click', '#registerNow', logBoxAjaxCall);
+  $('#registerBox').on('click', '#loginNow', logBoxAjaxCall);
 
-  function logInOutAjaxCall(event){
+  function logBoxAjaxCall(event){
     event.preventDefault();
     $target = $(event.target);
+    console.log($target)
     $.ajax({
       type: $target.attr('method'),
       url: $target.attr('action'),
