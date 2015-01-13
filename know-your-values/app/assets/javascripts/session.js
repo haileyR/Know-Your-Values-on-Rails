@@ -102,7 +102,7 @@ $(document).ready(function() {
     $target = $(event.target)
     $.ajax({
       type: 'post',
-      url: location.pathname+'/addvalue',
+      url: $target.attr('action'),
       data: {friend_id: parseInt($('#userID').val()), value_id: parseInt($target.attr('value'))}
     }).done(function(response){
       $target.closest('#possiblevalues').siblings('div').children('p').replaceWith(response);
@@ -113,9 +113,10 @@ $(document).ready(function() {
   $('#addvalue_form').on('submit', function(event){
     event.preventDefault();
     $target = $(event.target)
+    console.log($target);
     $.ajax({
       type: 'post',
-      url: location.pathname+'/addvalue',
+      url: $target.attr('action'),
       data: $target.serialize()
     }).done(function(response){
       $target.parent().siblings().children('p').replaceWith(response);
