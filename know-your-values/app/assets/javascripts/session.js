@@ -62,25 +62,25 @@ $(document).ready(function() {
     $('#bioEdit').text('Save Change');
   });
 
-  $('#friend_page_add').on('submit', 'add_back_button', function(event){
+  $('#friend_page_add').on('click', '#add_back_button', function(event){
     event.preventDefault();
     $target = $(event.target);
     $.ajax({
-      type: $target.children('input[name="_method"]').val(),
+      type: 'patch',
       url: $target.attr('action')
     }).done(function(response){
       $('#friend_page_add').text('request sent')
     });
   });
 
-  $('#friend_page_add').on('click', 'send_request_button', function(event){
+  $('#friend_page_add').on('click', '#send_request_button', function(event){
     event.preventDefault();
     $target = $(event.target);
     $.ajax({
-      type: $target.children('input[name="_method"]').val(),
+      type: $target.siblings('input[name="_method"]').val(),
       url: $target.attr('action')
     }).done(function(response){
-      $target.text('request sent')
+      $target.replaceWith("<p id='request_sent_p'>Request sent</p>")
     });
   });
 
