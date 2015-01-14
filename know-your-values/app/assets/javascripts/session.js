@@ -34,14 +34,26 @@ function friendsEditAjaxCall(event){
   });
 };
 
+function saveBio(event){
+  event.preventDefault();
+  $target = $(event.target);
+  $target.text('Saving...');
+  $.ajax({
+    type: 'PUT',
+    url: $target.attr('action'),
+    data: {user_id: parseInt($('#userID').val()), newbio: $target.siblings('p').text()}
+  }).done(function(response){
+    $target.text('Saved');
+  });
+};
+
 $(document).ready(function() {
   $('.userInfoCont').on('click', '#registerNow', logBoxAjaxCall);
   $('#registerBox').on('click', '#loginNow', logBoxAjaxCall);
+  $('#friend_page_add').on('submit', '.add', friendsEditAjaxCall);
   $('#friends').on('click', '#friendslistButton', friendsAjaxCall);
   $('#friends').on('click', '#friendrequestButton', friendsAjaxCall);
   $('#friends').on('submit', '.button_to', friendsEditAjaxCall);
-
-  $('#friend_page_add').on('submit', '.add', friendsEditAjaxCall);
 
   $('#friends').on('submit', '#search', function(event){
     event.preventDefault();
@@ -82,18 +94,7 @@ $(document).ready(function() {
     });
   });
 
-  $('#bio').on('click', '#bioEdit', function(event){
-    event.preventDefault();
-    $target = $(event.target);
-    $target.text('Saving...');
-    $.ajax({
-      type: 'PUT',
-      url: $target.attr('action'),
-      data: {user_id: parseInt($('#userID').val()), newbio: $target.siblings('p').text()}
-    }).done(function(response){
-      $target.text('Saved');
-    });
-  });
+  $('#bio').on('click', '#bioEdit', saveBio);
 
 
   $('#possiblevalues').on('click', 'a', function(event){
