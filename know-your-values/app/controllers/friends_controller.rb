@@ -18,15 +18,28 @@ class FriendsController < ApplicationController
   def show
     ship = Friendship.find_by(user_id: current_user.id, friend_id: params[:id])
     request_received = Friendship.find_by(user_id: params[:id], friend_id: current_user.id) != nil
+    request_sent = Friendship.find_by(friend_id: params[:id], user_id: current_user.id) != nil
     if ship && ship.status
       friend = User.find(params[:id])
       moreValues = Value.all.shuffle[0..50]
       values = UserValue.values_of_user(params[:id])
-      render '/values/friendvalues', locals: {friend: friend, values: values, moreValues: moreValues}
+      render '/values/friendvalues', locals: {friend: friend, values: values, moreValues: moreValues, request_sent: request_sent}
     else
       friend = User.find(params[:id])
       values = UserValue.values_of_user(params[:id])
-      render '/values/friendvalues', locals: {friend: friend, values: [], moreValues: [], request_received: request_received}
+      render '/values/friendvalues', locals: {friend: friend, values: [], moreValues: [], request_received: request_received, request_sent: request_sent}
+    end
+  end
+
+  def update
+    ship = Friendship.create(user_id: current_user.id, friend_id: params[:id])
+    request_sent = Friendship.find_by(friend_id: params[:id], user_id: current_user.id) != nil
+    if ship.status
+      moreValues = Value.all.shuffle[0..50]
+      values = UserValue.values_of_user(params[:id])
+      render '/values/friendvalues', locals: {friend: User.find(params[:id]), values: values, moreValues: moreValues, request_sent: request_sent}
+    else
+      render '/values/friendvalues', locals: {friend: friend, values: [], moreValues: [], request_received: request_received, request_sent: request_sent}
     end
   end
 
