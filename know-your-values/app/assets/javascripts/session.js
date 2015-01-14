@@ -1,20 +1,42 @@
+function logBoxAjaxCall(event){
+  event.preventDefault();
+  $target = $(event.target);
+  console.log($target)
+  $.ajax({
+    type: $target.attr('method'),
+    url: $target.attr('action'),
+    data: $target.serialize()
+  }).done(function(response){
+    $('.userInfoCont').replaceWith(response);
+  });
+};
+
+function friendsAjaxCall(event){
+  event.preventDefault();
+  $target = $(event.target);
+  $.ajax({
+    type: $target.attr('method'),
+    url: $target.attr('action'),
+    data: {user_id: parseInt($('#userID').val()), friend_id: parseInt($target.children('#friendID').val())}
+  }).done(function(response){
+    $('#friends').children('ul').replaceWith(response)
+  });
+};
+
+function friendsEditAjaxCall(event){
+  event.preventDefault();
+  $target = $(event.target);
+  $.ajax({
+    type: $target.children('input[name="_method"]').val(),
+    url: $target.attr('action')
+  }).done(function(response){
+    $('#friends').children('ul').replaceWith(response)
+  });
+};
+
 $(document).ready(function() {
   $('.userInfoCont').on('click', '#registerNow', logBoxAjaxCall);
   $('#registerBox').on('click', '#loginNow', logBoxAjaxCall);
-
-  function logBoxAjaxCall(event){
-    event.preventDefault();
-    $target = $(event.target);
-    console.log($target)
-    $.ajax({
-      type: $target.attr('method'),
-      url: $target.attr('action'),
-      data: $target.serialize()
-    }).done(function(response){
-      $('.userInfoCont').replaceWith(response);
-    });
-  };
-
   $('#friends').on('click', '#friendslistButton', friendsAjaxCall);
   $('#friends').on('click', '#friendrequestButton', friendsAjaxCall);
   $('#friends').on('submit', '.button_to', friendsEditAjaxCall);
@@ -33,30 +55,6 @@ $(document).ready(function() {
       $target.children('input[name="email"]').val("");
     });
   });
-
-  function friendsAjaxCall(event){
-    event.preventDefault();
-    $target = $(event.target);
-    $.ajax({
-      type: $target.attr('method'),
-      url: $target.attr('action'),
-      data: {user_id: parseInt($('#userID').val()), friend_id: parseInt($target.children('#friendID').val())}
-    }).done(function(response){
-      $('#friends').children('ul').replaceWith(response)
-    });
-  };
-
-  function friendsEditAjaxCall(event){
-    event.preventDefault();
-    $target = $(event.target);
-    $.ajax({
-      type: $target.children('input[name="_method"]').val(),
-      url: $target.attr('action')
-    }).done(function(response){
-      $('#friends').children('ul').replaceWith(response)
-    });
-  };
-
 
   $('#bio').on('click', 'p', function(event){
     $('#bioEdit').text('Save Change');
