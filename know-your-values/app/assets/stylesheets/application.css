@@ -149,7 +149,19 @@ h4{
 }
 
 
-
+#request_sent_p{
+  margin: 0 auto;
+  width: 160px;
+  background: transparent;
+  font-weight: bold;
+  font-size: 1em;
+  text-align: center;
+  border: 1.5px solid #B0C4DE;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  font-family: 'Abel', sans-serif;
+  padding: 5px;
+}
 
 .button_to input{
   background: transparent;
