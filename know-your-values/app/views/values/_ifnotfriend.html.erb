@@ -3,9 +3,12 @@
     <h3><%= friend.first_name %> added you.</h3>
     <h3>Add back to give values.</h3><br>
 
-    <%= button_to "add", friend_path(friend), method: :put, id: 'add_back_button' %>
+    <%= button_to "add", friend_path(friend), method: :patch, id: 'add_back_button' %>
+  <% elsif request_sent %>
+    <p id='request_sent_p'>Request already sent.</p>
+
   <% else %>
-    <%= button_tag "add #{friend.first_name} to give values",  method: :post, action: "/friend/#{friend.id}", id: 'send_request_button' %>
+    <%= button_to "add #{friend.first_name} to give values", friend_path(friend),  method: :patch, id: 'send_request_button' %>
 
   <% end %>
 

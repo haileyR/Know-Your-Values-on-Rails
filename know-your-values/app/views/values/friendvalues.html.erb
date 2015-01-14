@@ -2,14 +2,14 @@
   <div id='addedvalues'>
     <h2> <%= friend.first_name %>'s values </h2>
     <h3><%= friend.bio %></h3>
-    <%= render partial: 'values/addedvalues', locals: {values: values} %>
+    <%= render partial: 'values/addedvalues', locals: {values: values, request_sent: request_sent} %>
 
   </div>
 
   <% if values.length > 0 %>
     <%= render partial: 'values/iffriend', locals: {moreValues: moreValues, friend: friend}%>
   <% else %>
-    <%= render partial: 'values/ifnotfriend', locals: {friend: friend, request_received: request_received}%>
+    <%= render partial: 'values/ifnotfriend', locals: {friend: friend, request_received: request_received, request_sent: request_sent}%>
   <% end %>
 
 </div>
