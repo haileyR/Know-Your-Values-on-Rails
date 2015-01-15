@@ -16,8 +16,7 @@ function friendsAjaxCall(event){
   $target = $(event.target);
   $.ajax({
     type: $target.attr('method'),
-    url: $target.attr('action'),
-    data: {user_id: parseInt($('#userID').val()), friend_id: parseInt($target.children('#friendID').val())}
+    url: $target.attr('action')
   }).done(function(response){
     $('#friends').children('ul').replaceWith(response)
   });
