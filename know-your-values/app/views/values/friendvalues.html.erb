@@ -6,10 +6,13 @@
 
   </div>
 
-  <% if values.length > 0 %>
-    <%= render partial: 'values/iffriend', locals: {moreValues: moreValues, friend: friend}%>
-  <% else %>
-    <%= render partial: 'values/ifnotfriend', locals: {friend: friend, request_received: request_received, request_sent: request_sent}%>
-  <% end %>
+  <div id='friend_wrapper'>
+    <% if values.length > 0 %>
+      <%= render partial: 'values/iffriend', locals: {moreValues: moreValues, friend: friend}%>
+    <% else %>
+      <%= render partial: 'values/ifnotfriend', locals: {friend: friend, request_received: request_received, request_sent: request_sent}%>
+    <% end %>
+
+  </div>
 
 </div>

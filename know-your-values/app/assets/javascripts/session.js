@@ -72,7 +72,7 @@ $(document).ready(function() {
     $('#bioEdit').text('Save Change');
   });
 
-  $('#friend_page_add').on('click', '#add_back_button', function(event){
+  $('#friend_wrapper').on('click', '#add_back_button', function(event){
     event.preventDefault();
     $target = $(event.target);
     $.ajax({
