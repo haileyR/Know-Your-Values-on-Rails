@@ -3,7 +3,7 @@
     <div id='friends'>
       <h2>Friends</h2>
 
-      <%= button_tag 'All Friends',  method: :get, action: '/friends', id: 'friendslistButton' %>   <%= button_tag 'Friend Requests',  method: :get, action: '/requests', id: 'friendrequestButton' %>
+      <%= button_tag 'All Friends',  method: :get, action: '/truefriends', id: 'friendslistButton' %>   <%= button_tag 'Friend Requests',  method: :get, action: '/requests', id: 'friendrequestButton' %>
 
       <%= form_tag('/search', method: :get, id: 'search') do %>
         <%= text_field_tag :email, nil, placeholder: 'search by email' %>
