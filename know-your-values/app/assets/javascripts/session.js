@@ -96,35 +96,34 @@ $(document).ready(function() {
   $('#bio').on('click', '#bioEdit', saveBio);
 
 
-  $('#possiblevalues').on('click', 'a', function(event){
+  $('#friend_wrapper').on('click', '.value_a', function(event){
     event.preventDefault();
-    console.log('fail');
     $target = $(event.target)
     $.ajax({
       type: 'post',
-      url: $target.attr('action'),
-      data: {friend_id: parseInt($('#userID').val()), value_id: parseInt($target.attr('value'))}
+      url: $target.attr('href'),
+      data: {value_id: parseInt($target.attr('value'))}
     }).done(function(response){
-      $target.closest('#possiblevalues').siblings('div').children('p').replaceWith(response);
+      $target.closest('div').siblings().children('p').replaceWith(response);
     });
   });
 
 
-  $('#addvalue_form').on('submit', function(event){
+  $('#friend_wrapper').on('submit', '#addvalue_form', function(event){
     event.preventDefault();
     $target = $(event.target)
-    console.log($target);
     $.ajax({
       type: 'post',
       url: $target.attr('action'),
       data: $target.serialize()
     }).done(function(response){
-      $target.parent().siblings().children('p').replaceWith(response);
-      $target.children('input[name=\'word\']').val("");
+         console.log(response);
+      $target.closest('div').siblings().children('p').replaceWith(response);
+      $target.children('input[name="word"]').val("");
     });
   });
 
-  $('#morevalue_button').on('click', function(event){
+  $('#friend_wrapper').on('click', '#morevalue_button', function(event){
     event.preventDefault();
     $target = $(event.target)
     $target.text('Loading...');
