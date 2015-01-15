@@ -1,9 +1,10 @@
 <div id='friend_page_add'>
+
   <% if request_received %>
     <h3><%= friend.first_name %> added you.</h3>
     <h3>Add back to give values.</h3><br>
 
-    <%= button_to "add", friend_path(friend), method: :patch, id: 'add_back_button' %>
+    <%= button_tag "add", action: "/friends/#{friend.id}/add_back", method: :patch, id: 'add_back_button' %>
   <% elsif request_sent %>
     <p id='request_sent_p'>Request already sent.</p>
 

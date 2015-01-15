@@ -25,6 +25,7 @@ Rails.application.routes.draw do
   put '/profile', to: 'pages#profile'
   post '/friends/:id/addvalue', to: 'values#add'
   get '/friends/:id/values', to: 'values#show'
+  patch '/friends/:id/add_back', to: 'friends#add_back'
 
   # Example resource route with options:
     # resources :friends do
