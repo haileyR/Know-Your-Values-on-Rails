@@ -1,6 +1,6 @@
 class FriendsController < ApplicationController
   include IndexHelper
-  def index
+  def truefriends
     friends = Friendship.friends(current_user.id)
     render partial: 'friends/friendslist', locals: {friends: friends, button: "unfriend"}
   end
