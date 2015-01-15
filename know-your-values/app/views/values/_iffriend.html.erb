@@ -1,3 +1,7 @@
+<div id='addedvalues'>
+  <%= render partial: 'values/addedvalues', locals: {values: values} %>
+</div>
+
 <div id='possiblevalues'>
   <h3>click to add to <%= friend.first_name %>'s value list</h3>
   <%= render partial: 'values/possiblevalues', locals: {moreValues: moreValues, friend: friend} %>
