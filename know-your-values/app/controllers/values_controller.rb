@@ -3,7 +3,8 @@
   def show
     moreValues = Value.all.shuffle[0..50]
     friend = User.find(params[:id])
-    render partial: '/values/possiblevalues', locals: {moreValues: moreValues, friend: friend}
+    values = UserValue.values_of_user(params[:id])
+    render partial: '/values/possiblevalues', locals: {moreValues: moreValues, friend: friend, values: values}
   end
 
 
