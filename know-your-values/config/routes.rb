@@ -17,6 +17,7 @@ Rails.application.routes.draw do
   resources :friends
   get '/search', to: 'friends#search'
   get '/requests', to: 'friends#requests'
+  get '/truefriends', to: 'friends#truefriends'
   post '/login', to: 'pages#login'
   get '/login', to: 'pages#login_box'
   get '/register', to: 'pages#register'
