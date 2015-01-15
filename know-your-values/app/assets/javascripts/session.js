@@ -75,10 +75,10 @@ $(document).ready(function() {
     event.preventDefault();
     $target = $(event.target);
     $.ajax({
-      type: 'patch',
+      type: $target.attr('method'),
       url: $target.attr('action')
     }).done(function(response){
-      $('#friend_page_add').text('request sent')
+      $('#friend_page_add').replaceWith(response);
     });
   });
 
