@@ -31,16 +31,11 @@ class FriendsController < ApplicationController
     end
   end
 
-  def update
+  def add_back
     ship = Friendship.create(user_id: current_user.id, friend_id: params[:id])
-    request_sent = Friendship.find_by(friend_id: params[:id], user_id: current_user.id) != nil
-    if ship.status
-      moreValues = Value.all.shuffle[0..50]
-      values = UserValue.values_of_user(params[:id])
-      render '/values/friendvalues', locals: {friend: User.find(params[:id]), values: values, moreValues: moreValues, request_sent: request_sent}
-    else
-      render '/values/friendvalues', locals: {friend: friend, values: [], moreValues: [], request_received: request_received, request_sent: request_sent}
-    end
+    moreValues = Value.all.shuffle[0..50]
+    values = UserValue.values_of_user(params[:id])
+    render partial: '/values/iffriend', locals: {friend: User.find(params[:id]), values: values, moreValues: moreValues}
   end
 
   def update
