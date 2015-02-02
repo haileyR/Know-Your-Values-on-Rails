@@ -1,8 +1,8 @@
 <div class='userInfoCont'>
   <h4 id='userMsg'>It's a good decision. :)</h4>
   <%= form_for :user, url: '/register', method: :post, id: 'registerBox' do |f| %>
-    <%= f.text_field :first_name, placeholder: 'email' %>
-    <%= f.text_field :last_name, placeholder: 'email' %>
+    <%= f.text_field :first_name, placeholder: 'First name' %>
+    <%= f.text_field :last_name, placeholder: 'Last name' %>
     <%= f.text_field :email, placeholder: 'email' %>
     <%= f.text_field :password, placeholder: 'password', type: 'password' %>
     <%= f.text_field :password_confirmation, placeholder: 'password_confirmation', type: 'password' %>

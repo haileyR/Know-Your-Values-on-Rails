@@ -19790,3 +19790,1359 @@ Started GET "/assets/application-b706c8baedd34404bed765688cda1a1c.css?body=1" fo
 
 
 Started GET "/assets/reset-a2a01a7ddaee5e300fa3e6dcd0d55c77.css?body=1" for ::1 at 2015-01-28 07:24:47 -0800
+
+
+Started GET "/" for ::1 at 2015-02-01 18:21:50 -0800
+
+PG::ConnectionBad (could not connect to server: No such file or directory
+	Is the server running locally and accepting
+	connections on Unix domain socket "/tmp/.s.PGSQL.5432"?
+):
+  activerecord (4.2.0) lib/active_record/connection_adapters/postgresql_adapter.rb:651:in `initialize'
+  activerecord (4.2.0) lib/active_record/connection_adapters/postgresql_adapter.rb:651:in `new'
+  activerecord (4.2.0) lib/active_record/connection_adapters/postgresql_adapter.rb:651:in `connect'
+  activerecord (4.2.0) lib/active_record/connection_adapters/postgresql_adapter.rb:242:in `initialize'
+  activerecord (4.2.0) lib/active_record/connection_adapters/postgresql_adapter.rb:44:in `new'
+  activerecord (4.2.0) lib/active_record/connection_adapters/postgresql_adapter.rb:44:in `postgresql_connection'
+  activerecord (4.2.0) lib/active_record/connection_adapters/abstract/connection_pool.rb:436:in `new_connection'
+  activerecord (4.2.0) lib/active_record/connection_adapters/abstract/connection_pool.rb:446:in `checkout_new_connection'
+  activerecord (4.2.0) lib/active_record/connection_adapters/abstract/connection_pool.rb:422:in `acquire_connection'
+  activerecord (4.2.0) lib/active_record/connection_adapters/abstract/connection_pool.rb:349:in `block in checkout'
+  /Users/hangyeolryu/.rbenv/versions/2.0.0-p481/lib/ruby/2.0.0/monitor.rb:211:in `mon_synchronize'
+  activerecord (4.2.0) lib/active_record/connection_adapters/abstract/connection_pool.rb:348:in `checkout'
+  activerecord (4.2.0) lib/active_record/connection_adapters/abstract/connection_pool.rb:263:in `block in connection'
+  /Users/hangyeolryu/.rbenv/versions/2.0.0-p481/lib/ruby/2.0.0/monitor.rb:211:in `mon_synchronize'
+  activerecord (4.2.0) lib/active_record/connection_adapters/abstract/connection_pool.rb:262:in `connection'
+  activerecord (4.2.0) lib/active_record/connection_adapters/abstract/connection_pool.rb:565:in `retrieve_connection'
+  activerecord (4.2.0) lib/active_record/connection_handling.rb:113:in `retrieve_connection'
+  activerecord (4.2.0) lib/active_record/connection_handling.rb:87:in `connection'
+  activerecord (4.2.0) lib/active_record/migration.rb:384:in `connection'
+  activerecord (4.2.0) lib/active_record/migration.rb:371:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.2.0) lib/active_support/callbacks.rb:88:in `call'
+  activesupport (4.2.0) lib/active_support/callbacks.rb:88:in `_run_callbacks'
+  activesupport (4.2.0) lib/active_support/callbacks.rb:734:in `_run_call_callbacks'
+  activesupport (4.2.0) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.0) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/remote_ip.rb:78:in `call'
+  web-console (2.0.0) lib/action_dispatch/debug_exceptions.rb:18:in `middleware_call'
+  web-console (2.0.0) lib/action_dispatch/debug_exceptions.rb:13:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.0) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.0) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.0) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.0) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.0) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.0) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.0) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.0) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.0) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.0) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/static.rb:113:in `call'
+  rack (1.6.0) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.0) lib/rails/engine.rb:518:in `call'
+  railties (4.2.0) lib/rails/application.rb:164:in `call'
+  rack (1.6.0) lib/rack/lock.rb:17:in `call'
+  rack (1.6.0) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.0) lib/rack/handler/webrick.rb:89:in `service'
+  /Users/hangyeolryu/.rbenv/versions/2.0.0-p481/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /Users/hangyeolryu/.rbenv/versions/2.0.0-p481/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /Users/hangyeolryu/.rbenv/versions/2.0.0-p481/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/hangyeolryu/.rbenv/versions/2.0.0-p481/lib/ruby/gems/2.0.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_source.erb (4.5ms)
+  Rendered /Users/hangyeolryu/.rbenv/versions/2.0.0-p481/lib/ruby/gems/2.0.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_trace.html.erb (2.2ms)
+  Rendered /Users/hangyeolryu/.rbenv/versions/2.0.0-p481/lib/ruby/gems/2.0.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /Users/hangyeolryu/.rbenv/versions/2.0.0-p481/lib/ruby/gems/2.0.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_web_console.html.erb (1.1ms)
+  Rendered /Users/hangyeolryu/.rbenv/versions/2.0.0-p481/lib/ruby/gems/2.0.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/diagnostics.html.erb within rescues/layout (40.1ms)
+
+
+Started GET "/" for ::1 at 2015-02-01 18:21:51 -0800
+
+PG::ConnectionBad (could not connect to server: No such file or directory
+	Is the server running locally and accepting
+	connections on Unix domain socket "/tmp/.s.PGSQL.5432"?
+):
+  activerecord (4.2.0) lib/active_record/connection_adapters/postgresql_adapter.rb:651:in `initialize'
+  activerecord (4.2.0) lib/active_record/connection_adapters/postgresql_adapter.rb:651:in `new'
+  activerecord (4.2.0) lib/active_record/connection_adapters/postgresql_adapter.rb:651:in `connect'
+  activerecord (4.2.0) lib/active_record/connection_adapters/postgresql_adapter.rb:242:in `initialize'
+  activerecord (4.2.0) lib/active_record/connection_adapters/postgresql_adapter.rb:44:in `new'
+  activerecord (4.2.0) lib/active_record/connection_adapters/postgresql_adapter.rb:44:in `postgresql_connection'
+  activerecord (4.2.0) lib/active_record/connection_adapters/abstract/connection_pool.rb:436:in `new_connection'
+  activerecord (4.2.0) lib/active_record/connection_adapters/abstract/connection_pool.rb:446:in `checkout_new_connection'
+  activerecord (4.2.0) lib/active_record/connection_adapters/abstract/connection_pool.rb:422:in `acquire_connection'
+  activerecord (4.2.0) lib/active_record/connection_adapters/abstract/connection_pool.rb:349:in `block in checkout'
+  /Users/hangyeolryu/.rbenv/versions/2.0.0-p481/lib/ruby/2.0.0/monitor.rb:211:in `mon_synchronize'
+  activerecord (4.2.0) lib/active_record/connection_adapters/abstract/connection_pool.rb:348:in `checkout'
+  activerecord (4.2.0) lib/active_record/connection_adapters/abstract/connection_pool.rb:263:in `block in connection'
+  /Users/hangyeolryu/.rbenv/versions/2.0.0-p481/lib/ruby/2.0.0/monitor.rb:211:in `mon_synchronize'
+  activerecord (4.2.0) lib/active_record/connection_adapters/abstract/connection_pool.rb:262:in `connection'
+  activerecord (4.2.0) lib/active_record/connection_adapters/abstract/connection_pool.rb:565:in `retrieve_connection'
+  activerecord (4.2.0) lib/active_record/connection_handling.rb:113:in `retrieve_connection'
+  activerecord (4.2.0) lib/active_record/connection_handling.rb:87:in `connection'
+  activerecord (4.2.0) lib/active_record/migration.rb:384:in `connection'
+  activerecord (4.2.0) lib/active_record/migration.rb:371:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.2.0) lib/active_support/callbacks.rb:88:in `call'
+  activesupport (4.2.0) lib/active_support/callbacks.rb:88:in `_run_callbacks'
+  activesupport (4.2.0) lib/active_support/callbacks.rb:734:in `_run_call_callbacks'
+  activesupport (4.2.0) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.0) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/remote_ip.rb:78:in `call'
+  web-console (2.0.0) lib/action_dispatch/debug_exceptions.rb:18:in `middleware_call'
+  web-console (2.0.0) lib/action_dispatch/debug_exceptions.rb:13:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.0) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.0) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.0) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.0) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.0) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.0) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.0) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.0) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.0) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.0) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/static.rb:113:in `call'
+  rack (1.6.0) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.0) lib/rails/engine.rb:518:in `call'
+  railties (4.2.0) lib/rails/application.rb:164:in `call'
+  rack (1.6.0) lib/rack/lock.rb:17:in `call'
+  rack (1.6.0) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.0) lib/rack/handler/webrick.rb:89:in `service'
+  /Users/hangyeolryu/.rbenv/versions/2.0.0-p481/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /Users/hangyeolryu/.rbenv/versions/2.0.0-p481/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /Users/hangyeolryu/.rbenv/versions/2.0.0-p481/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/hangyeolryu/.rbenv/versions/2.0.0-p481/lib/ruby/gems/2.0.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_source.erb (4.8ms)
+  Rendered /Users/hangyeolryu/.rbenv/versions/2.0.0-p481/lib/ruby/gems/2.0.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_trace.html.erb (2.1ms)
+  Rendered /Users/hangyeolryu/.rbenv/versions/2.0.0-p481/lib/ruby/gems/2.0.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /Users/hangyeolryu/.rbenv/versions/2.0.0-p481/lib/ruby/gems/2.0.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_web_console.html.erb (1.0ms)
+  Rendered /Users/hangyeolryu/.rbenv/versions/2.0.0-p481/lib/ruby/gems/2.0.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/diagnostics.html.erb within rescues/layout (28.2ms)
+
+
+Started GET "/" for ::1 at 2015-02-01 18:23:07 -0800
+  [1m[36mActiveRecord::SchemaMigration Load (3.6ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by PagesController#index as HTML
+  Rendered pages/show.html.erb within layouts/application (1.1ms)
+  Rendered pages/_logedout.html.erb (10.9ms)
+Completed 200 OK in 170ms (Views: 158.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/reset-a2a01a7ddaee5e300fa3e6dcd0d55c77.css?body=1" for ::1 at 2015-02-01 18:23:08 -0800
+
+
+Started GET "/assets/application-b706c8baedd34404bed765688cda1a1c.css?body=1" for ::1 at 2015-02-01 18:23:08 -0800
+
+
+Started GET "/assets/jquery-eb3e278249152b5b5d5170b73d9dbf52.js?body=1" for ::1 at 2015-02-01 18:23:08 -0800
+
+
+Started GET "/assets/jquery_ujs-0b8f09cf5aec4ba1be1abd9f915c77e2.js?body=1" for ::1 at 2015-02-01 18:23:08 -0800
+
+
+Started GET "/assets/session-aaabfe4f5239213f24879363ed1f6fdc.js?body=1" for ::1 at 2015-02-01 18:23:08 -0800
+
+
+Started GET "/assets/application-71d71005c9a0c7761daf7f9243fe6926.js?body=1" for ::1 at 2015-02-01 18:23:08 -0800
+
+
+Started POST "/login" for ::1 at 2015-02-01 18:23:16 -0800
+Processing by PagesController#login as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"NaOxMz9ax9Lk9c5FTyT0bC7JOfmRckGS7jCeUBzLVxhU+4nc3tDKYf6UrUQhMLAMaUeeT0QS9B+y8LE07gMr+Q==", "user"=>{"email"=>"a@a.com", "password"=>"[FILTERED]"}, "commit"=>"Login"}
+  [1m[35mUser Load (6.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT 1  [["email", "a@a.com"]]
+  [1m[36mUser Load (1.9ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mUserValue Load (3.4ms)[0m  SELECT "user_values".* FROM "user_values" WHERE "user_values"."user_id" = $1  [["user_id", 1]]
+  [1m[36mValue Load (4.1ms)[0m  [1mSELECT "values".* FROM "values" WHERE "values"."id" IN (176, 377, 9, 243, 216, 384, 134, 104)[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 226ms (ActiveRecord: 42.4ms)
+
+
+Started GET "/" for ::1 at 2015-02-01 18:23:17 -0800
+Processing by PagesController#index as HTML
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mUserValue Load (0.6ms)[0m  SELECT "user_values".* FROM "user_values" WHERE "user_values"."user_id" = $1  [["user_id", 1]]
+  [1m[36mValue Load (0.9ms)[0m  [1mSELECT "values".* FROM "values" WHERE "values"."id" IN (176, 377, 9, 243, 216, 384, 134, 104)[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  Rendered pages/show.html.erb within layouts/application (1.3ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  Rendered pages/_logedin.html.erb (1.9ms)
+Completed 200 OK in 109ms (Views: 100.5ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/logout" for ::1 at 2015-02-01 18:26:21 -0800
+Processing by PagesController#logout as HTML
+Redirected to http://localhost:3000/
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2015-02-01 18:26:21 -0800
+Processing by PagesController#index as HTML
+  Rendered pages/show.html.erb within layouts/application (0.1ms)
+  Rendered pages/_logedout.html.erb (0.8ms)
+Completed 200 OK in 48ms (Views: 47.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/register" for ::1 at 2015-02-01 18:26:23 -0800
+Processing by PagesController#register as */*
+  Rendered pages/_register.html.erb (2.1ms)
+Completed 200 OK in 12ms (Views: 11.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2015-02-01 18:27:19 -0800
+Processing by PagesController#index as HTML
+  Rendered pages/show.html.erb within layouts/application (0.1ms)
+  Rendered pages/_logedout.html.erb (1.2ms)
+Completed 200 OK in 50ms (Views: 49.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/reset-a2a01a7ddaee5e300fa3e6dcd0d55c77.css?body=1" for ::1 at 2015-02-01 18:27:20 -0800
+
+
+Started GET "/assets/jquery_ujs-0b8f09cf5aec4ba1be1abd9f915c77e2.js?body=1" for ::1 at 2015-02-01 18:27:20 -0800
+
+
+Started GET "/assets/application-b706c8baedd34404bed765688cda1a1c.css?body=1" for ::1 at 2015-02-01 18:27:20 -0800
+
+
+Started GET "/assets/session-aaabfe4f5239213f24879363ed1f6fdc.js?body=1" for ::1 at 2015-02-01 18:27:20 -0800
+
+
+Started GET "/assets/jquery-eb3e278249152b5b5d5170b73d9dbf52.js?body=1" for ::1 at 2015-02-01 18:27:20 -0800
+
+
+Started GET "/assets/application-71d71005c9a0c7761daf7f9243fe6926.js?body=1" for ::1 at 2015-02-01 18:27:20 -0800
+
+
+Started GET "/register" for ::1 at 2015-02-01 18:27:21 -0800
+Processing by PagesController#register as */*
+  Rendered pages/_register.html.erb (2.0ms)
+Completed 200 OK in 10ms (Views: 9.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2015-02-01 18:27:56 -0800
+Processing by PagesController#index as HTML
+  Rendered pages/show.html.erb within layouts/application (0.1ms)
+  Rendered pages/_logedout.html.erb (0.6ms)
+Completed 200 OK in 91ms (Views: 90.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/reset-a2a01a7ddaee5e300fa3e6dcd0d55c77.css?body=1" for ::1 at 2015-02-01 18:27:56 -0800
+
+
+Started GET "/assets/jquery-eb3e278249152b5b5d5170b73d9dbf52.js?body=1" for ::1 at 2015-02-01 18:27:56 -0800
+
+
+Started GET "/assets/application-b706c8baedd34404bed765688cda1a1c.css?body=1" for ::1 at 2015-02-01 18:27:56 -0800
+
+
+Started GET "/assets/session-aaabfe4f5239213f24879363ed1f6fdc.js?body=1" for ::1 at 2015-02-01 18:27:56 -0800
+
+
+Started GET "/assets/jquery_ujs-0b8f09cf5aec4ba1be1abd9f915c77e2.js?body=1" for ::1 at 2015-02-01 18:27:56 -0800
+
+
+Started GET "/assets/application-71d71005c9a0c7761daf7f9243fe6926.js?body=1" for ::1 at 2015-02-01 18:27:56 -0800
+
+
+Started POST "/login" for ::1 at 2015-02-01 18:28:09 -0800
+Processing by PagesController#login as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"LcnRaEEHVGIVBTX5t6nXjs/1dGxNcDv4mw1VxPE0bTpMkemHoI1Z0Q9kVvjZvZPuiHvT2pgQjnXHzXqgA/wR2w==", "user"=>{"email"=>"a@a.com", "password"=>"[FILTERED]"}, "commit"=>"Login"}
+  [1m[35mUser Load (0.9ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT 1  [["email", "a@a.com"]]
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mUserValue Load (0.8ms)[0m  SELECT "user_values".* FROM "user_values" WHERE "user_values"."user_id" = $1  [["user_id", 1]]
+  [1m[36mValue Load (1.1ms)[0m  [1mSELECT "values".* FROM "values" WHERE "values"."id" IN (176, 377, 9, 243, 216, 384, 134, 104)[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 104ms (ActiveRecord: 3.9ms)
+
+
+Started GET "/" for ::1 at 2015-02-01 18:28:09 -0800
+Processing by PagesController#index as HTML
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mUserValue Load (0.4ms)[0m  SELECT "user_values".* FROM "user_values" WHERE "user_values"."user_id" = $1  [["user_id", 1]]
+  [1m[36mValue Load (0.6ms)[0m  [1mSELECT "values".* FROM "values" WHERE "values"."id" IN (176, 377, 9, 243, 216, 384, 134, 104)[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  Rendered pages/show.html.erb within layouts/application (1.2ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  Rendered pages/_logedin.html.erb (0.9ms)
+Completed 200 OK in 51ms (Views: 45.2ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/assets/application-b706c8baedd34404bed765688cda1a1c.css?body=1" for ::1 at 2015-02-01 18:28:09 -0800
+
+
+Started GET "/assets/reset-a2a01a7ddaee5e300fa3e6dcd0d55c77.css?body=1" for ::1 at 2015-02-01 18:28:09 -0800
+
+
+Started GET "/assets/jquery-eb3e278249152b5b5d5170b73d9dbf52.js?body=1" for ::1 at 2015-02-01 18:28:09 -0800
+
+
+Started GET "/assets/jquery_ujs-0b8f09cf5aec4ba1be1abd9f915c77e2.js?body=1" for ::1 at 2015-02-01 18:28:09 -0800
+
+
+Started GET "/assets/application-71d71005c9a0c7761daf7f9243fe6926.js?body=1" for ::1 at 2015-02-01 18:28:09 -0800
+
+
+Started GET "/assets/session-aaabfe4f5239213f24879363ed1f6fdc.js?body=1" for ::1 at 2015-02-01 18:28:09 -0800
+
+
+Started GET "/" for ::1 at 2015-02-01 18:28:20 -0800
+Processing by PagesController#index as HTML
+  [1m[35mUser Load (0.5ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mUserValue Load (0.5ms)[0m  SELECT "user_values".* FROM "user_values" WHERE "user_values"."user_id" = $1  [["user_id", 1]]
+  [1m[36mValue Load (1.0ms)[0m  [1mSELECT "values".* FROM "values" WHERE "values"."id" IN (176, 377, 9, 243, 216, 384, 134, 104)[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  Rendered pages/show.html.erb within layouts/application (1.3ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  Rendered pages/_logedin.html.erb (1.1ms)
+Completed 200 OK in 58ms (Views: 44.4ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/assets/application-b706c8baedd34404bed765688cda1a1c.css?body=1" for ::1 at 2015-02-01 18:28:20 -0800
+
+
+Started GET "/assets/reset-a2a01a7ddaee5e300fa3e6dcd0d55c77.css?body=1" for ::1 at 2015-02-01 18:28:20 -0800
+
+
+Started GET "/assets/jquery-eb3e278249152b5b5d5170b73d9dbf52.js?body=1" for ::1 at 2015-02-01 18:28:20 -0800
+
+
+Started GET "/assets/jquery_ujs-0b8f09cf5aec4ba1be1abd9f915c77e2.js?body=1" for ::1 at 2015-02-01 18:28:20 -0800
+
+
+Started GET "/assets/application-71d71005c9a0c7761daf7f9243fe6926.js?body=1" for ::1 at 2015-02-01 18:28:20 -0800
+
+
+Started GET "/assets/session-aaabfe4f5239213f24879363ed1f6fdc.js?body=1" for ::1 at 2015-02-01 18:28:20 -0800
+
+
+Started GET "/truefriends" for ::1 at 2015-02-01 18:28:24 -0800
+Processing by FriendsController#truefriends as */*
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mFriendship Load (2.3ms)[0m  [1mSELECT "friendships".* FROM "friendships" WHERE "friendships"."user_id" = $1 AND "friendships"."status" = 't'[0m  [["user_id", 1]]
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 6]]
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 7]]
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 3]]
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 4]]
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 8]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  Rendered friends/_friendslist.html.erb (4.1ms)
+Completed 200 OK in 39ms (Views: 16.9ms | ActiveRecord: 7.2ms)
+
+
+Started GET "/requests" for ::1 at 2015-02-01 18:28:26 -0800
+Processing by FriendsController#requests as */*
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mFriendship Load (0.9ms)[0m  [1mSELECT "friendships".* FROM "friendships" WHERE "friendships"."friend_id" = $1 AND "friendships"."status" IS NULL[0m  [["friend_id", 1]]
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 5]]
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 9]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  Rendered friends/_friendslist.html.erb (1.4ms)
+Completed 200 OK in 15ms (Views: 9.8ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/truefriends" for ::1 at 2015-02-01 18:28:27 -0800
+Processing by FriendsController#truefriends as */*
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mFriendship Load (0.4ms)[0m  [1mSELECT "friendships".* FROM "friendships" WHERE "friendships"."user_id" = $1 AND "friendships"."status" = 't'[0m  [["user_id", 1]]
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 6]]
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 7]]
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 3]]
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 4]]
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 8]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  Rendered friends/_friendslist.html.erb (2.9ms)
+Completed 200 OK in 17ms (Views: 10.7ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/requests" for ::1 at 2015-02-01 18:28:28 -0800
+Processing by FriendsController#requests as */*
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mFriendship Load (0.4ms)[0m  [1mSELECT "friendships".* FROM "friendships" WHERE "friendships"."friend_id" = $1 AND "friendships"."status" IS NULL[0m  [["friend_id", 1]]
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 5]]
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 9]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  Rendered friends/_friendslist.html.erb (1.5ms)
+Completed 200 OK in 13ms (Views: 9.5ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/truefriends" for ::1 at 2015-02-01 18:28:29 -0800
+Processing by FriendsController#truefriends as */*
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mFriendship Load (0.5ms)[0m  [1mSELECT "friendships".* FROM "friendships" WHERE "friendships"."user_id" = $1 AND "friendships"."status" = 't'[0m  [["user_id", 1]]
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 6]]
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 7]]
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 3]]
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 4]]
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 8]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  Rendered friends/_friendslist.html.erb (3.0ms)
+Completed 200 OK in 17ms (Views: 10.8ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/requests" for ::1 at 2015-02-01 18:28:29 -0800
+Processing by FriendsController#requests as */*
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mFriendship Load (0.3ms)[0m  [1mSELECT "friendships".* FROM "friendships" WHERE "friendships"."friend_id" = $1 AND "friendships"."status" IS NULL[0m  [["friend_id", 1]]
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 5]]
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 9]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  Rendered friends/_friendslist.html.erb (1.2ms)
+Completed 200 OK in 13ms (Views: 8.7ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/truefriends" for ::1 at 2015-02-01 18:28:30 -0800
+Processing by FriendsController#truefriends as */*
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mFriendship Load (0.4ms)[0m  [1mSELECT "friendships".* FROM "friendships" WHERE "friendships"."user_id" = $1 AND "friendships"."status" = 't'[0m  [["user_id", 1]]
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 6]]
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 7]]
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 3]]
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 4]]
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 8]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  Rendered friends/_friendslist.html.erb (3.0ms)
+Completed 200 OK in 17ms (Views: 11.0ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/" for ::1 at 2015-02-01 18:28:45 -0800
+Processing by PagesController#index as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mUserValue Load (0.4ms)[0m  SELECT "user_values".* FROM "user_values" WHERE "user_values"."user_id" = $1  [["user_id", 1]]
+  [1m[36mValue Load (0.8ms)[0m  [1mSELECT "values".* FROM "values" WHERE "values"."id" IN (176, 377, 9, 243, 216, 384, 134, 104)[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  Rendered pages/show.html.erb within layouts/application (67.3ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  Rendered pages/_logedin.html.erb (0.9ms)
+Completed 200 OK in 124ms (Views: 117.1ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/assets/reset-a2a01a7ddaee5e300fa3e6dcd0d55c77.css?body=1" for ::1 at 2015-02-01 18:28:45 -0800
+
+
+Started GET "/assets/application-b706c8baedd34404bed765688cda1a1c.css?body=1" for ::1 at 2015-02-01 18:28:46 -0800
+
+
+Started GET "/assets/session-aaabfe4f5239213f24879363ed1f6fdc.js?body=1" for ::1 at 2015-02-01 18:28:46 -0800
+
+
+Started GET "/assets/jquery_ujs-0b8f09cf5aec4ba1be1abd9f915c77e2.js?body=1" for ::1 at 2015-02-01 18:28:46 -0800
+
+
+Started GET "/assets/jquery-eb3e278249152b5b5d5170b73d9dbf52.js?body=1" for ::1 at 2015-02-01 18:28:46 -0800
+
+
+Started GET "/assets/application-71d71005c9a0c7761daf7f9243fe6926.js?body=1" for ::1 at 2015-02-01 18:28:46 -0800
+
+
+Started GET "/logout" for ::1 at 2015-02-01 18:28:47 -0800
+Processing by PagesController#logout as HTML
+Redirected to http://localhost:3000/
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2015-02-01 18:28:47 -0800
+Processing by PagesController#index as HTML
+  Rendered pages/show.html.erb within layouts/application (0.1ms)
+  Rendered pages/_logedout.html.erb (0.8ms)
+Completed 200 OK in 43ms (Views: 42.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/reset-a2a01a7ddaee5e300fa3e6dcd0d55c77.css?body=1" for ::1 at 2015-02-01 18:28:47 -0800
+
+
+Started GET "/assets/application-b706c8baedd34404bed765688cda1a1c.css?body=1" for ::1 at 2015-02-01 18:28:47 -0800
+
+
+Started GET "/assets/application-71d71005c9a0c7761daf7f9243fe6926.js?body=1" for ::1 at 2015-02-01 18:28:47 -0800
+
+
+Started GET "/assets/jquery_ujs-0b8f09cf5aec4ba1be1abd9f915c77e2.js?body=1" for ::1 at 2015-02-01 18:28:47 -0800
+
+
+Started GET "/assets/session-aaabfe4f5239213f24879363ed1f6fdc.js?body=1" for ::1 at 2015-02-01 18:28:47 -0800
+
+
+Started GET "/assets/jquery-eb3e278249152b5b5d5170b73d9dbf52.js?body=1" for ::1 at 2015-02-01 18:28:47 -0800
+
+
+Started GET "/" for ::1 at 2015-02-01 18:41:23 -0800
+Processing by PagesController#index as HTML
+  Rendered pages/show.html.erb within layouts/application (10.8ms)
+  Rendered pages/_logedout.html.erb (5.8ms)
+Completed 200 OK in 164ms (Views: 148.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/jquery_ujs-0b8f09cf5aec4ba1be1abd9f915c77e2.js?body=1" for ::1 at 2015-02-01 18:41:24 -0800
+
+
+Started GET "/assets/application-b706c8baedd34404bed765688cda1a1c.css?body=1" for ::1 at 2015-02-01 18:41:24 -0800
+
+
+Started GET "/assets/reset-a2a01a7ddaee5e300fa3e6dcd0d55c77.css?body=1" for ::1 at 2015-02-01 18:41:24 -0800
+
+
+Started GET "/assets/jquery-eb3e278249152b5b5d5170b73d9dbf52.js?body=1" for ::1 at 2015-02-01 18:41:24 -0800
+
+
+Started GET "/assets/application-71d71005c9a0c7761daf7f9243fe6926.js?body=1" for ::1 at 2015-02-01 18:41:24 -0800
+
+
+Started GET "/assets/session-aaabfe4f5239213f24879363ed1f6fdc.js?body=1" for ::1 at 2015-02-01 18:41:24 -0800
+
+
+Started GET "/" for ::1 at 2015-02-01 18:42:32 -0800
+Processing by PagesController#index as HTML
+  Rendered pages/show.html.erb within layouts/application (1.2ms)
+  Rendered pages/_logedout.html.erb (0.6ms)
+Completed 200 OK in 198ms (Views: 197.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/jquery-eb3e278249152b5b5d5170b73d9dbf52.js?body=1" for ::1 at 2015-02-01 18:42:32 -0800
+
+
+Started GET "/assets/jquery_ujs-0b8f09cf5aec4ba1be1abd9f915c77e2.js?body=1" for ::1 at 2015-02-01 18:42:32 -0800
+
+
+Started GET "/assets/application-b706c8baedd34404bed765688cda1a1c.css?body=1" for ::1 at 2015-02-01 18:42:32 -0800
+
+
+Started GET "/assets/reset-a2a01a7ddaee5e300fa3e6dcd0d55c77.css?body=1" for ::1 at 2015-02-01 18:42:32 -0800
+
+
+Started GET "/assets/session-aaabfe4f5239213f24879363ed1f6fdc.js?body=1" for ::1 at 2015-02-01 18:42:32 -0800
+
+
+Started GET "/assets/application-71d71005c9a0c7761daf7f9243fe6926.js?body=1" for ::1 at 2015-02-01 18:42:32 -0800
+
+
+Started GET "/" for ::1 at 2015-02-01 18:43:26 -0800
+Processing by PagesController#index as HTML
+  Rendered pages/show.html.erb within layouts/application (1.3ms)
+  Rendered pages/_logedout.html.erb (0.8ms)
+Completed 200 OK in 66ms (Views: 64.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/reset-a2a01a7ddaee5e300fa3e6dcd0d55c77.css?body=1" for ::1 at 2015-02-01 18:43:26 -0800
+
+
+Started GET "/assets/jquery_ujs-0b8f09cf5aec4ba1be1abd9f915c77e2.js?body=1" for ::1 at 2015-02-01 18:43:26 -0800
+
+
+Started GET "/assets/application-e728e0e7e4517f60f227d8c39468a1d5.css?body=1" for ::1 at 2015-02-01 18:43:26 -0800
+
+
+Started GET "/assets/session-aaabfe4f5239213f24879363ed1f6fdc.js?body=1" for ::1 at 2015-02-01 18:43:26 -0800
+
+
+Started GET "/assets/jquery-eb3e278249152b5b5d5170b73d9dbf52.js?body=1" for ::1 at 2015-02-01 18:43:26 -0800
+
+
+Started GET "/assets/application-71d71005c9a0c7761daf7f9243fe6926.js?body=1" for ::1 at 2015-02-01 18:43:26 -0800
+
+
+Started GET "/" for ::1 at 2015-02-01 18:43:37 -0800
+Processing by PagesController#index as HTML
+  Rendered pages/show.html.erb within layouts/application (0.1ms)
+  Rendered pages/_logedout.html.erb (0.7ms)
+Completed 200 OK in 62ms (Views: 61.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/reset-a2a01a7ddaee5e300fa3e6dcd0d55c77.css?body=1" for ::1 at 2015-02-01 18:43:38 -0800
+
+
+Started GET "/assets/application-f403e96328e693fa849e6d40ea32e37e.css?body=1" for ::1 at 2015-02-01 18:43:38 -0800
+
+
+Started GET "/assets/jquery_ujs-0b8f09cf5aec4ba1be1abd9f915c77e2.js?body=1" for ::1 at 2015-02-01 18:43:38 -0800
+
+
+Started GET "/assets/session-aaabfe4f5239213f24879363ed1f6fdc.js?body=1" for ::1 at 2015-02-01 18:43:38 -0800
+
+
+Started GET "/assets/jquery-eb3e278249152b5b5d5170b73d9dbf52.js?body=1" for ::1 at 2015-02-01 18:43:38 -0800
+
+
+Started GET "/assets/application-71d71005c9a0c7761daf7f9243fe6926.js?body=1" for ::1 at 2015-02-01 18:43:38 -0800
+
+
+Started GET "/" for ::1 at 2015-02-01 18:44:03 -0800
+Processing by PagesController#index as HTML
+  Rendered pages/show.html.erb within layouts/application (0.1ms)
+  Rendered pages/_logedout.html.erb (0.6ms)
+Completed 200 OK in 135ms (Views: 133.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/reset-a2a01a7ddaee5e300fa3e6dcd0d55c77.css?body=1" for ::1 at 2015-02-01 18:44:04 -0800
+
+
+Started GET "/assets/application-29eb7cfa8d79d3975ea0436297954edd.css?body=1" for ::1 at 2015-02-01 18:44:04 -0800
+
+
+Started GET "/assets/jquery_ujs-0b8f09cf5aec4ba1be1abd9f915c77e2.js?body=1" for ::1 at 2015-02-01 18:44:04 -0800
+
+
+Started GET "/assets/session-aaabfe4f5239213f24879363ed1f6fdc.js?body=1" for ::1 at 2015-02-01 18:44:04 -0800
+
+
+Started GET "/assets/jquery-eb3e278249152b5b5d5170b73d9dbf52.js?body=1" for ::1 at 2015-02-01 18:44:04 -0800
+
+
+Started GET "/assets/application-71d71005c9a0c7761daf7f9243fe6926.js?body=1" for ::1 at 2015-02-01 18:44:04 -0800
+
+
+Started GET "/" for ::1 at 2015-02-01 18:44:11 -0800
+Processing by PagesController#index as HTML
+  Rendered pages/show.html.erb within layouts/application (0.1ms)
+  Rendered pages/_logedout.html.erb (1.0ms)
+Completed 200 OK in 115ms (Views: 114.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/reset-a2a01a7ddaee5e300fa3e6dcd0d55c77.css?body=1" for ::1 at 2015-02-01 18:44:12 -0800
+
+
+Started GET "/assets/application-f38111415e48ccdbad7ceadc0b6af5d7.css?body=1" for ::1 at 2015-02-01 18:44:12 -0800
+
+
+Started GET "/assets/jquery_ujs-0b8f09cf5aec4ba1be1abd9f915c77e2.js?body=1" for ::1 at 2015-02-01 18:44:12 -0800
+
+
+Started GET "/assets/jquery-eb3e278249152b5b5d5170b73d9dbf52.js?body=1" for ::1 at 2015-02-01 18:44:12 -0800
+
+
+Started GET "/assets/application-71d71005c9a0c7761daf7f9243fe6926.js?body=1" for ::1 at 2015-02-01 18:44:12 -0800
+
+
+Started GET "/assets/session-aaabfe4f5239213f24879363ed1f6fdc.js?body=1" for ::1 at 2015-02-01 18:44:12 -0800
+
+
+Started GET "/" for ::1 at 2015-02-01 18:44:20 -0800
+Processing by PagesController#index as HTML
+  Rendered pages/show.html.erb within layouts/application (0.1ms)
+  Rendered pages/_logedout.html.erb (1.1ms)
+Completed 200 OK in 124ms (Views: 122.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/reset-a2a01a7ddaee5e300fa3e6dcd0d55c77.css?body=1" for ::1 at 2015-02-01 18:44:20 -0800
+
+
+Started GET "/assets/application-11d0773369459e7de30fb54fbcc4792f.css?body=1" for ::1 at 2015-02-01 18:44:20 -0800
+
+
+Started GET "/assets/session-aaabfe4f5239213f24879363ed1f6fdc.js?body=1" for ::1 at 2015-02-01 18:44:20 -0800
+
+
+Started GET "/assets/jquery_ujs-0b8f09cf5aec4ba1be1abd9f915c77e2.js?body=1" for ::1 at 2015-02-01 18:44:20 -0800
+
+
+Started GET "/assets/jquery-eb3e278249152b5b5d5170b73d9dbf52.js?body=1" for ::1 at 2015-02-01 18:44:20 -0800
+
+
+Started GET "/assets/application-71d71005c9a0c7761daf7f9243fe6926.js?body=1" for ::1 at 2015-02-01 18:44:20 -0800
+
+
+Started GET "/assets/reset-a2a01a7ddaee5e300fa3e6dcd0d55c77.css?body=1" for ::1 at 2015-02-01 18:44:30 -0800
+
+
+Started GET "/" for ::1 at 2015-02-01 18:44:36 -0800
+Processing by PagesController#index as HTML
+  Rendered pages/show.html.erb within layouts/application (1.1ms)
+  Rendered pages/_logedout.html.erb (0.8ms)
+Completed 200 OK in 46ms (Views: 45.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application-11d0773369459e7de30fb54fbcc4792f.css?body=1" for ::1 at 2015-02-01 18:44:36 -0800
+
+
+Started GET "/assets/reset-a2a01a7ddaee5e300fa3e6dcd0d55c77.css?body=1" for ::1 at 2015-02-01 18:44:36 -0800
+
+
+Started GET "/assets/jquery-eb3e278249152b5b5d5170b73d9dbf52.js?body=1" for ::1 at 2015-02-01 18:44:36 -0800
+
+
+Started GET "/assets/jquery_ujs-0b8f09cf5aec4ba1be1abd9f915c77e2.js?body=1" for ::1 at 2015-02-01 18:44:36 -0800
+
+
+Started GET "/assets/session-aaabfe4f5239213f24879363ed1f6fdc.js?body=1" for ::1 at 2015-02-01 18:44:36 -0800
+
+
+Started GET "/assets/application-71d71005c9a0c7761daf7f9243fe6926.js?body=1" for ::1 at 2015-02-01 18:44:36 -0800
+
+
+Started GET "/" for ::1 at 2015-02-01 18:46:38 -0800
+Processing by PagesController#index as HTML
+  Rendered pages/show.html.erb within layouts/application (0.1ms)
+  Rendered pages/_logedout.html.erb (0.7ms)
+Completed 200 OK in 224ms (Views: 222.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/reset-a2a01a7ddaee5e300fa3e6dcd0d55c77.css?body=1" for ::1 at 2015-02-01 18:46:39 -0800
+
+
+Started GET "/assets/application-b670c8d515b6b65cc5bef43fa9c5c1d8.css?body=1" for ::1 at 2015-02-01 18:46:39 -0800
+
+
+Started GET "/assets/jquery-eb3e278249152b5b5d5170b73d9dbf52.js?body=1" for ::1 at 2015-02-01 18:46:39 -0800
+
+
+Started GET "/assets/application-71d71005c9a0c7761daf7f9243fe6926.js?body=1" for ::1 at 2015-02-01 18:46:39 -0800
+
+
+Started GET "/assets/session-aaabfe4f5239213f24879363ed1f6fdc.js?body=1" for ::1 at 2015-02-01 18:46:39 -0800
+
+
+Started GET "/assets/jquery_ujs-0b8f09cf5aec4ba1be1abd9f915c77e2.js?body=1" for ::1 at 2015-02-01 18:46:39 -0800
+
+
+Started GET "/" for ::1 at 2015-02-01 18:48:26 -0800
+Processing by PagesController#index as HTML
+  Rendered pages/show.html.erb within layouts/application (0.1ms)
+  Rendered pages/_logedout.html.erb (0.7ms)
+Completed 200 OK in 131ms (Views: 129.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/reset-a2a01a7ddaee5e300fa3e6dcd0d55c77.css?body=1" for ::1 at 2015-02-01 18:48:26 -0800
+
+
+Started GET "/assets/application-c9b06fdcc770a701a3a875b6f77eec7d.css?body=1" for ::1 at 2015-02-01 18:48:26 -0800
+
+
+Started GET "/assets/jquery_ujs-0b8f09cf5aec4ba1be1abd9f915c77e2.js?body=1" for ::1 at 2015-02-01 18:48:26 -0800
+
+
+Started GET "/assets/jquery-eb3e278249152b5b5d5170b73d9dbf52.js?body=1" for ::1 at 2015-02-01 18:48:26 -0800
+
+
+Started GET "/assets/application-71d71005c9a0c7761daf7f9243fe6926.js?body=1" for ::1 at 2015-02-01 18:48:26 -0800
+
+
+Started GET "/assets/session-aaabfe4f5239213f24879363ed1f6fdc.js?body=1" for ::1 at 2015-02-01 18:48:26 -0800
+
+
+Started GET "/" for ::1 at 2015-02-01 18:48:43 -0800
+Processing by PagesController#index as HTML
+  Rendered pages/show.html.erb within layouts/application (0.1ms)
+  Rendered pages/_logedout.html.erb (0.5ms)
+Completed 200 OK in 120ms (Views: 118.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/jquery-eb3e278249152b5b5d5170b73d9dbf52.js?body=1" for ::1 at 2015-02-01 18:48:44 -0800
+
+
+Started GET "/assets/application-38fd35d4762ec7c7763a40736fdf3f2a.css?body=1" for ::1 at 2015-02-01 18:48:44 -0800
+
+
+Started GET "/assets/jquery_ujs-0b8f09cf5aec4ba1be1abd9f915c77e2.js?body=1" for ::1 at 2015-02-01 18:48:44 -0800
+
+
+Started GET "/assets/application-71d71005c9a0c7761daf7f9243fe6926.js?body=1" for ::1 at 2015-02-01 18:48:44 -0800
+
+
+Started GET "/assets/reset-a2a01a7ddaee5e300fa3e6dcd0d55c77.css?body=1" for ::1 at 2015-02-01 18:48:44 -0800
+
+
+Started GET "/assets/session-aaabfe4f5239213f24879363ed1f6fdc.js?body=1" for ::1 at 2015-02-01 18:48:44 -0800
+
+
+Started GET "/" for ::1 at 2015-02-01 18:49:01 -0800
+Processing by PagesController#index as HTML
+  Rendered pages/show.html.erb within layouts/application (0.1ms)
+  Rendered pages/_logedout.html.erb (0.5ms)
+Completed 200 OK in 58ms (Views: 57.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/reset-a2a01a7ddaee5e300fa3e6dcd0d55c77.css?body=1" for ::1 at 2015-02-01 18:49:01 -0800
+
+
+Started GET "/assets/application-600eed0e12c92ce4bec65d39c7f0401c.css?body=1" for ::1 at 2015-02-01 18:49:01 -0800
+
+
+Started GET "/assets/jquery-eb3e278249152b5b5d5170b73d9dbf52.js?body=1" for ::1 at 2015-02-01 18:49:01 -0800
+
+
+Started GET "/assets/session-aaabfe4f5239213f24879363ed1f6fdc.js?body=1" for ::1 at 2015-02-01 18:49:01 -0800
+
+
+Started GET "/assets/jquery_ujs-0b8f09cf5aec4ba1be1abd9f915c77e2.js?body=1" for ::1 at 2015-02-01 18:49:01 -0800
+
+
+Started GET "/assets/application-71d71005c9a0c7761daf7f9243fe6926.js?body=1" for ::1 at 2015-02-01 18:49:01 -0800
+
+
+Started GET "/assets/reset-a2a01a7ddaee5e300fa3e6dcd0d55c77.css?body=1" for ::1 at 2015-02-01 18:49:16 -0800
+
+
+Started GET "/" for ::1 at 2015-02-01 18:51:07 -0800
+Processing by PagesController#index as HTML
+  Rendered pages/show.html.erb within layouts/application (0.4ms)
+  Rendered pages/_logedout.html.erb (2.4ms)
+Completed 200 OK in 90ms (Views: 85.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/reset-a2a01a7ddaee5e300fa3e6dcd0d55c77.css?body=1" for ::1 at 2015-02-01 18:51:07 -0800
+
+
+Started GET "/assets/jquery-eb3e278249152b5b5d5170b73d9dbf52.js?body=1" for ::1 at 2015-02-01 18:51:07 -0800
+
+
+Started GET "/assets/application-f5d2051210ad2e77835ceafa4c0efa0e.css?body=1" for ::1 at 2015-02-01 18:51:07 -0800
+
+
+Started GET "/assets/jquery_ujs-0b8f09cf5aec4ba1be1abd9f915c77e2.js?body=1" for ::1 at 2015-02-01 18:51:07 -0800
+
+
+Started GET "/assets/application-71d71005c9a0c7761daf7f9243fe6926.js?body=1" for ::1 at 2015-02-01 18:51:07 -0800
+
+
+Started GET "/assets/session-aaabfe4f5239213f24879363ed1f6fdc.js?body=1" for ::1 at 2015-02-01 18:51:07 -0800
+
+
+Started GET "/" for ::1 at 2015-02-01 18:51:20 -0800
+Processing by PagesController#index as HTML
+  Rendered pages/show.html.erb within layouts/application (0.1ms)
+  Rendered pages/_logedout.html.erb (0.7ms)
+Completed 200 OK in 128ms (Views: 127.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/reset-a2a01a7ddaee5e300fa3e6dcd0d55c77.css?body=1" for ::1 at 2015-02-01 18:51:21 -0800
+
+
+Started GET "/assets/jquery_ujs-0b8f09cf5aec4ba1be1abd9f915c77e2.js?body=1" for ::1 at 2015-02-01 18:51:21 -0800
+
+
+Started GET "/assets/jquery-eb3e278249152b5b5d5170b73d9dbf52.js?body=1" for ::1 at 2015-02-01 18:51:21 -0800
+
+
+Started GET "/assets/application-b250215b506ab0d47953f59671613f73.css?body=1" for ::1 at 2015-02-01 18:51:21 -0800
+
+
+Started GET "/assets/session-aaabfe4f5239213f24879363ed1f6fdc.js?body=1" for ::1 at 2015-02-01 18:51:21 -0800
+
+
+Started GET "/assets/application-71d71005c9a0c7761daf7f9243fe6926.js?body=1" for ::1 at 2015-02-01 18:51:21 -0800
+
+
+Started GET "/" for ::1 at 2015-02-01 18:52:18 -0800
+Processing by PagesController#index as HTML
+  Rendered pages/show.html.erb within layouts/application (0.1ms)
+  Rendered pages/_logedout.html.erb (0.6ms)
+Completed 200 OK in 122ms (Views: 121.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/reset-a2a01a7ddaee5e300fa3e6dcd0d55c77.css?body=1" for ::1 at 2015-02-01 18:52:18 -0800
+
+
+Started GET "/assets/application-4bd8ccd0a86c626cd37722616d462333.css?body=1" for ::1 at 2015-02-01 18:52:18 -0800
+
+
+Started GET "/assets/jquery-eb3e278249152b5b5d5170b73d9dbf52.js?body=1" for ::1 at 2015-02-01 18:52:18 -0800
+
+
+Started GET "/assets/session-aaabfe4f5239213f24879363ed1f6fdc.js?body=1" for ::1 at 2015-02-01 18:52:18 -0800
+
+
+Started GET "/assets/application-71d71005c9a0c7761daf7f9243fe6926.js?body=1" for ::1 at 2015-02-01 18:52:18 -0800
+
+
+Started GET "/assets/jquery_ujs-0b8f09cf5aec4ba1be1abd9f915c77e2.js?body=1" for ::1 at 2015-02-01 18:52:18 -0800
+
+
+Started GET "/" for ::1 at 2015-02-01 18:52:32 -0800
+Processing by PagesController#index as HTML
+  Rendered pages/show.html.erb within layouts/application (1.1ms)
+  Rendered pages/_logedout.html.erb (0.7ms)
+Completed 200 OK in 98ms (Views: 96.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/reset-a2a01a7ddaee5e300fa3e6dcd0d55c77.css?body=1" for ::1 at 2015-02-01 18:52:32 -0800
+
+
+Started GET "/assets/session-aaabfe4f5239213f24879363ed1f6fdc.js?body=1" for ::1 at 2015-02-01 18:52:32 -0800
+
+
+Started GET "/assets/application-4bd8ccd0a86c626cd37722616d462333.css?body=1" for ::1 at 2015-02-01 18:52:32 -0800
+
+
+Started GET "/assets/jquery_ujs-0b8f09cf5aec4ba1be1abd9f915c77e2.js?body=1" for ::1 at 2015-02-01 18:52:32 -0800
+
+
+Started GET "/assets/application-71d71005c9a0c7761daf7f9243fe6926.js?body=1" for ::1 at 2015-02-01 18:52:32 -0800
+
+
+Started GET "/assets/jquery-eb3e278249152b5b5d5170b73d9dbf52.js?body=1" for ::1 at 2015-02-01 18:52:32 -0800
+
+
+Started GET "/" for ::1 at 2015-02-01 18:53:34 -0800
+Processing by PagesController#index as HTML
+  Rendered pages/show.html.erb within layouts/application (0.1ms)
+  Rendered pages/_logedout.html.erb (1.1ms)
+Completed 200 OK in 68ms (Views: 67.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/reset-a2a01a7ddaee5e300fa3e6dcd0d55c77.css?body=1" for ::1 at 2015-02-01 18:53:34 -0800
+
+
+Started GET "/assets/jquery-eb3e278249152b5b5d5170b73d9dbf52.js?body=1" for ::1 at 2015-02-01 18:53:34 -0800
+
+
+Started GET "/assets/application-640eb4c371007cf60cb060d629099e33.css?body=1" for ::1 at 2015-02-01 18:53:34 -0800
+
+
+Started GET "/assets/application-71d71005c9a0c7761daf7f9243fe6926.js?body=1" for ::1 at 2015-02-01 18:53:34 -0800
+
+
+Started GET "/assets/session-aaabfe4f5239213f24879363ed1f6fdc.js?body=1" for ::1 at 2015-02-01 18:53:34 -0800
+
+
+Started GET "/assets/jquery_ujs-0b8f09cf5aec4ba1be1abd9f915c77e2.js?body=1" for ::1 at 2015-02-01 18:53:34 -0800
+
+
+Started GET "/" for ::1 at 2015-02-01 18:53:40 -0800
+Processing by PagesController#index as HTML
+  Rendered pages/show.html.erb within layouts/application (0.1ms)
+  Rendered pages/_logedout.html.erb (0.5ms)
+Completed 200 OK in 119ms (Views: 118.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/reset-a2a01a7ddaee5e300fa3e6dcd0d55c77.css?body=1" for ::1 at 2015-02-01 18:53:40 -0800
+
+
+Started GET "/assets/jquery-eb3e278249152b5b5d5170b73d9dbf52.js?body=1" for ::1 at 2015-02-01 18:53:40 -0800
+
+
+Started GET "/assets/application-10de98ff693bf71a2f1eee2813480043.css?body=1" for ::1 at 2015-02-01 18:53:40 -0800
+
+
+Started GET "/assets/application-71d71005c9a0c7761daf7f9243fe6926.js?body=1" for ::1 at 2015-02-01 18:53:40 -0800
+
+
+Started GET "/assets/jquery_ujs-0b8f09cf5aec4ba1be1abd9f915c77e2.js?body=1" for ::1 at 2015-02-01 18:53:40 -0800
+
+
+Started GET "/assets/session-aaabfe4f5239213f24879363ed1f6fdc.js?body=1" for ::1 at 2015-02-01 18:53:40 -0800
+
+
+Started GET "/" for ::1 at 2015-02-01 18:53:56 -0800
+Processing by PagesController#index as HTML
+  Rendered pages/show.html.erb within layouts/application (0.1ms)
+  Rendered pages/_logedout.html.erb (0.6ms)
+Completed 200 OK in 120ms (Views: 119.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/reset-a2a01a7ddaee5e300fa3e6dcd0d55c77.css?body=1" for ::1 at 2015-02-01 18:53:56 -0800
+
+
+Started GET "/assets/session-aaabfe4f5239213f24879363ed1f6fdc.js?body=1" for ::1 at 2015-02-01 18:53:56 -0800
+
+
+Started GET "/assets/application-0491e449ead8f47000b3fa26630e6437.css?body=1" for ::1 at 2015-02-01 18:53:56 -0800
+
+
+Started GET "/assets/application-71d71005c9a0c7761daf7f9243fe6926.js?body=1" for ::1 at 2015-02-01 18:53:56 -0800
+
+
+Started GET "/assets/jquery-eb3e278249152b5b5d5170b73d9dbf52.js?body=1" for ::1 at 2015-02-01 18:53:56 -0800
+
+
+Started GET "/assets/jquery_ujs-0b8f09cf5aec4ba1be1abd9f915c77e2.js?body=1" for ::1 at 2015-02-01 18:53:56 -0800
+
+
+Started GET "/" for ::1 at 2015-02-01 18:54:07 -0800
+Processing by PagesController#index as HTML
+  Rendered pages/show.html.erb within layouts/application (0.1ms)
+  Rendered pages/_logedout.html.erb (0.5ms)
+Completed 200 OK in 124ms (Views: 123.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/reset-a2a01a7ddaee5e300fa3e6dcd0d55c77.css?body=1" for ::1 at 2015-02-01 18:54:08 -0800
+
+
+Started GET "/assets/session-aaabfe4f5239213f24879363ed1f6fdc.js?body=1" for ::1 at 2015-02-01 18:54:08 -0800
+
+
+Started GET "/assets/application-71d71005c9a0c7761daf7f9243fe6926.js?body=1" for ::1 at 2015-02-01 18:54:08 -0800
+
+
+Started GET "/assets/application-4283b72e118326bdff9a89c666d74ab7.css?body=1" for ::1 at 2015-02-01 18:54:08 -0800
+
+
+Started GET "/assets/jquery-eb3e278249152b5b5d5170b73d9dbf52.js?body=1" for ::1 at 2015-02-01 18:54:08 -0800
+
+
+Started GET "/assets/jquery_ujs-0b8f09cf5aec4ba1be1abd9f915c77e2.js?body=1" for ::1 at 2015-02-01 18:54:08 -0800
+
+
+Started GET "/" for ::1 at 2015-02-01 18:54:14 -0800
+Processing by PagesController#index as HTML
+  Rendered pages/show.html.erb within layouts/application (0.0ms)
+  Rendered pages/_logedout.html.erb (1.2ms)
+Completed 200 OK in 115ms (Views: 114.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/reset-a2a01a7ddaee5e300fa3e6dcd0d55c77.css?body=1" for ::1 at 2015-02-01 18:54:14 -0800
+
+
+Started GET "/assets/application-b294ebd7da79273a539d4e76d327d324.css?body=1" for ::1 at 2015-02-01 18:54:14 -0800
+
+
+Started GET "/assets/jquery-eb3e278249152b5b5d5170b73d9dbf52.js?body=1" for ::1 at 2015-02-01 18:54:14 -0800
+
+
+Started GET "/assets/application-71d71005c9a0c7761daf7f9243fe6926.js?body=1" for ::1 at 2015-02-01 18:54:14 -0800
+
+
+Started GET "/assets/session-aaabfe4f5239213f24879363ed1f6fdc.js?body=1" for ::1 at 2015-02-01 18:54:14 -0800
+
+
+Started GET "/assets/jquery_ujs-0b8f09cf5aec4ba1be1abd9f915c77e2.js?body=1" for ::1 at 2015-02-01 18:54:14 -0800
+
+
+Started GET "/" for ::1 at 2015-02-01 18:54:58 -0800
+Processing by PagesController#index as HTML
+  Rendered pages/show.html.erb within layouts/application (0.1ms)
+  Rendered pages/_logedout.html.erb (0.5ms)
+Completed 200 OK in 60ms (Views: 58.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/reset-a2a01a7ddaee5e300fa3e6dcd0d55c77.css?body=1" for ::1 at 2015-02-01 18:54:58 -0800
+
+
+Started GET "/assets/application-d4d0fa015d090219ec04862403165ff0.css?body=1" for ::1 at 2015-02-01 18:54:58 -0800
+
+
+Started GET "/assets/session-aaabfe4f5239213f24879363ed1f6fdc.js?body=1" for ::1 at 2015-02-01 18:54:58 -0800
+
+
+Started GET "/assets/jquery-eb3e278249152b5b5d5170b73d9dbf52.js?body=1" for ::1 at 2015-02-01 18:54:58 -0800
+
+
+Started GET "/assets/jquery_ujs-0b8f09cf5aec4ba1be1abd9f915c77e2.js?body=1" for ::1 at 2015-02-01 18:54:58 -0800
+
+
+Started GET "/assets/application-71d71005c9a0c7761daf7f9243fe6926.js?body=1" for ::1 at 2015-02-01 18:54:58 -0800
+
+
+Started GET "/" for ::1 at 2015-02-01 18:55:10 -0800
+Processing by PagesController#index as HTML
+  Rendered pages/show.html.erb within layouts/application (0.1ms)
+  Rendered pages/_logedout.html.erb (0.5ms)
+Completed 200 OK in 116ms (Views: 115.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/reset-a2a01a7ddaee5e300fa3e6dcd0d55c77.css?body=1" for ::1 at 2015-02-01 18:55:10 -0800
+
+
+Started GET "/assets/application-4e3feceda2ece1969de00c9111cb523f.css?body=1" for ::1 at 2015-02-01 18:55:10 -0800
+
+
+Started GET "/assets/jquery-eb3e278249152b5b5d5170b73d9dbf52.js?body=1" for ::1 at 2015-02-01 18:55:11 -0800
+
+
+Started GET "/assets/application-71d71005c9a0c7761daf7f9243fe6926.js?body=1" for ::1 at 2015-02-01 18:55:11 -0800
+
+
+Started GET "/assets/jquery_ujs-0b8f09cf5aec4ba1be1abd9f915c77e2.js?body=1" for ::1 at 2015-02-01 18:55:11 -0800
+
+
+Started GET "/assets/session-aaabfe4f5239213f24879363ed1f6fdc.js?body=1" for ::1 at 2015-02-01 18:55:11 -0800
+
+
+Started GET "/" for ::1 at 2015-02-01 18:55:16 -0800
+Processing by PagesController#index as HTML
+  Rendered pages/show.html.erb within layouts/application (0.0ms)
+  Rendered pages/_logedout.html.erb (0.9ms)
+Completed 200 OK in 110ms (Views: 109.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/reset-a2a01a7ddaee5e300fa3e6dcd0d55c77.css?body=1" for ::1 at 2015-02-01 18:55:16 -0800
+
+
+Started GET "/assets/jquery-eb3e278249152b5b5d5170b73d9dbf52.js?body=1" for ::1 at 2015-02-01 18:55:16 -0800
+
+
+Started GET "/assets/application-d0606ce40b366cf561f2a07d653f6ea8.css?body=1" for ::1 at 2015-02-01 18:55:16 -0800
+
+
+Started GET "/assets/application-71d71005c9a0c7761daf7f9243fe6926.js?body=1" for ::1 at 2015-02-01 18:55:16 -0800
+
+
+Started GET "/assets/session-aaabfe4f5239213f24879363ed1f6fdc.js?body=1" for ::1 at 2015-02-01 18:55:16 -0800
+
+
+Started GET "/assets/jquery_ujs-0b8f09cf5aec4ba1be1abd9f915c77e2.js?body=1" for ::1 at 2015-02-01 18:55:16 -0800
+
+
+Started GET "/" for ::1 at 2015-02-01 18:55:29 -0800
+Processing by PagesController#index as HTML
+  Rendered pages/show.html.erb within layouts/application (0.1ms)
+  Rendered pages/_logedout.html.erb (0.5ms)
+Completed 200 OK in 110ms (Views: 109.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/reset-a2a01a7ddaee5e300fa3e6dcd0d55c77.css?body=1" for ::1 at 2015-02-01 18:55:29 -0800
+
+
+Started GET "/assets/jquery-eb3e278249152b5b5d5170b73d9dbf52.js?body=1" for ::1 at 2015-02-01 18:55:29 -0800
+
+
+Started GET "/assets/application-f1c3b7bda46f9e9ab205613486dfa80b.css?body=1" for ::1 at 2015-02-01 18:55:29 -0800
+
+
+Started GET "/assets/session-aaabfe4f5239213f24879363ed1f6fdc.js?body=1" for ::1 at 2015-02-01 18:55:29 -0800
+
+
+Started GET "/assets/application-71d71005c9a0c7761daf7f9243fe6926.js?body=1" for ::1 at 2015-02-01 18:55:29 -0800
+
+
+Started GET "/assets/jquery_ujs-0b8f09cf5aec4ba1be1abd9f915c77e2.js?body=1" for ::1 at 2015-02-01 18:55:29 -0800
+
+
+Started GET "/" for ::1 at 2015-02-01 18:55:39 -0800
+Processing by PagesController#index as HTML
+  Rendered pages/show.html.erb within layouts/application (0.1ms)
+  Rendered pages/_logedout.html.erb (0.6ms)
+Completed 200 OK in 109ms (Views: 108.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/reset-a2a01a7ddaee5e300fa3e6dcd0d55c77.css?body=1" for ::1 at 2015-02-01 18:55:40 -0800
+
+
+Started GET "/assets/jquery_ujs-0b8f09cf5aec4ba1be1abd9f915c77e2.js?body=1" for ::1 at 2015-02-01 18:55:40 -0800
+
+
+Started GET "/assets/session-aaabfe4f5239213f24879363ed1f6fdc.js?body=1" for ::1 at 2015-02-01 18:55:40 -0800
+
+
+Started GET "/assets/application-2d7610073a2d945793e6e06d2a6b5668.css?body=1" for ::1 at 2015-02-01 18:55:40 -0800
+
+
+Started GET "/assets/jquery-eb3e278249152b5b5d5170b73d9dbf52.js?body=1" for ::1 at 2015-02-01 18:55:40 -0800
+
+
+Started GET "/assets/application-71d71005c9a0c7761daf7f9243fe6926.js?body=1" for ::1 at 2015-02-01 18:55:40 -0800
+
+
+Started GET "/" for ::1 at 2015-02-01 18:55:54 -0800
+Processing by PagesController#index as HTML
+  Rendered pages/show.html.erb within layouts/application (0.1ms)
+  Rendered pages/_logedout.html.erb (0.8ms)
+Completed 200 OK in 64ms (Views: 63.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/reset-a2a01a7ddaee5e300fa3e6dcd0d55c77.css?body=1" for ::1 at 2015-02-01 18:55:54 -0800
+
+
+Started GET "/assets/jquery-eb3e278249152b5b5d5170b73d9dbf52.js?body=1" for ::1 at 2015-02-01 18:55:54 -0800
+
+
+Started GET "/assets/session-aaabfe4f5239213f24879363ed1f6fdc.js?body=1" for ::1 at 2015-02-01 18:55:54 -0800
+
+
+Started GET "/assets/application-71d71005c9a0c7761daf7f9243fe6926.js?body=1" for ::1 at 2015-02-01 18:55:54 -0800
+
+
+Started GET "/assets/application-cfd91cfa820cbe584c2d13cc55e8f16c.css?body=1" for ::1 at 2015-02-01 18:55:54 -0800
+
+
+Started GET "/assets/jquery_ujs-0b8f09cf5aec4ba1be1abd9f915c77e2.js?body=1" for ::1 at 2015-02-01 18:55:54 -0800
+
+
+Started GET "/assets/reset-a2a01a7ddaee5e300fa3e6dcd0d55c77.css?body=1" for ::1 at 2015-02-01 18:56:01 -0800
+
+
+Started GET "/" for ::1 at 2015-02-01 18:59:48 -0800
+Processing by PagesController#index as HTML
+  Rendered pages/show.html.erb within layouts/application (0.2ms)
+  Rendered pages/_logedout.html.erb (0.7ms)
+Completed 200 OK in 70ms (Views: 69.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/reset-a2a01a7ddaee5e300fa3e6dcd0d55c77.css?body=1" for ::1 at 2015-02-01 18:59:49 -0800
+
+
+Started GET "/assets/application-1fe10daaaa1fd531a434a4e540423cc9.css?body=1" for ::1 at 2015-02-01 18:59:49 -0800
+
+
+Started GET "/assets/jquery-eb3e278249152b5b5d5170b73d9dbf52.js?body=1" for ::1 at 2015-02-01 18:59:49 -0800
+
+
+Started GET "/assets/jquery_ujs-0b8f09cf5aec4ba1be1abd9f915c77e2.js?body=1" for ::1 at 2015-02-01 18:59:49 -0800
+
+
+Started GET "/assets/session-aaabfe4f5239213f24879363ed1f6fdc.js?body=1" for ::1 at 2015-02-01 18:59:49 -0800
+
+
+Started GET "/assets/application-71d71005c9a0c7761daf7f9243fe6926.js?body=1" for ::1 at 2015-02-01 18:59:49 -0800
+
+
+Started GET "/" for ::1 at 2015-02-01 19:00:23 -0800
+Processing by PagesController#index as HTML
+  Rendered pages/show.html.erb within layouts/application (0.1ms)
+  Rendered pages/_logedout.html.erb (1.0ms)
+Completed 200 OK in 132ms (Views: 131.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/reset-a2a01a7ddaee5e300fa3e6dcd0d55c77.css?body=1" for ::1 at 2015-02-01 19:00:23 -0800
+
+
+Started GET "/assets/application-c1ac54185d05d336624414f8823ef18e.css?body=1" for ::1 at 2015-02-01 19:00:23 -0800
+
+
+Started GET "/assets/session-aaabfe4f5239213f24879363ed1f6fdc.js?body=1" for ::1 at 2015-02-01 19:00:23 -0800
+
+
+Started GET "/assets/jquery_ujs-0b8f09cf5aec4ba1be1abd9f915c77e2.js?body=1" for ::1 at 2015-02-01 19:00:23 -0800
+
+
+Started GET "/assets/application-71d71005c9a0c7761daf7f9243fe6926.js?body=1" for ::1 at 2015-02-01 19:00:23 -0800
+
+
+Started GET "/assets/jquery-eb3e278249152b5b5d5170b73d9dbf52.js?body=1" for ::1 at 2015-02-01 19:00:23 -0800
+
+
+Started GET "/" for ::1 at 2015-02-01 19:00:44 -0800
+Processing by PagesController#index as HTML
+  Rendered pages/show.html.erb within layouts/application (0.1ms)
+  Rendered pages/_logedout.html.erb (0.6ms)
+Completed 200 OK in 114ms (Views: 113.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/reset-a2a01a7ddaee5e300fa3e6dcd0d55c77.css?body=1" for ::1 at 2015-02-01 19:00:45 -0800
+
+
+Started GET "/assets/application-782150850cfcc895b9594ced4ddeb060.css?body=1" for ::1 at 2015-02-01 19:00:45 -0800
+
+
+Started GET "/assets/application-71d71005c9a0c7761daf7f9243fe6926.js?body=1" for ::1 at 2015-02-01 19:00:45 -0800
+
+
+Started GET "/assets/jquery-eb3e278249152b5b5d5170b73d9dbf52.js?body=1" for ::1 at 2015-02-01 19:00:45 -0800
+
+
+Started GET "/assets/jquery_ujs-0b8f09cf5aec4ba1be1abd9f915c77e2.js?body=1" for ::1 at 2015-02-01 19:00:45 -0800
+
+
+Started GET "/assets/session-aaabfe4f5239213f24879363ed1f6fdc.js?body=1" for ::1 at 2015-02-01 19:00:45 -0800
+
+
+Started POST "/login" for ::1 at 2015-02-01 19:13:10 -0800
+Processing by PagesController#login as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"fSJgr/lfuq5KYUla+01UAn6HiFn+5mFyPzFztqbZ+PkcelhAGNW3HVAAKluVWRBiOQkv7yuG1P9j8VzSVBGEGA==", "user"=>{"email"=>"a@a.com", "password"=>"[FILTERED]"}, "commit"=>"Login"}
+  [1m[35mUser Load (28.6ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT 1  [["email", "a@a.com"]]
+  [1m[36mUser Load (2.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mUserValue Load (1.0ms)[0m  SELECT "user_values".* FROM "user_values" WHERE "user_values"."user_id" = $1  [["user_id", 1]]
+  [1m[36mValue Load (19.6ms)[0m  [1mSELECT "values".* FROM "values" WHERE "values"."id" IN (176, 377, 9, 243, 216, 384, 134, 104)[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 219ms (ActiveRecord: 51.1ms)
+
+
+Started GET "/" for ::1 at 2015-02-01 19:13:10 -0800
+Processing by PagesController#index as HTML
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mUserValue Load (0.3ms)[0m  SELECT "user_values".* FROM "user_values" WHERE "user_values"."user_id" = $1  [["user_id", 1]]
+  [1m[36mValue Load (0.8ms)[0m  [1mSELECT "values".* FROM "values" WHERE "values"."id" IN (176, 377, 9, 243, 216, 384, 134, 104)[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  Rendered pages/show.html.erb within layouts/application (3.6ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  Rendered pages/_logedin.html.erb (2.0ms)
+Completed 200 OK in 307ms (Views: 298.9ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/assets/jquery-eb3e278249152b5b5d5170b73d9dbf52.js?body=1" for ::1 at 2015-02-01 19:13:10 -0800
+
+
+Started GET "/assets/session-aaabfe4f5239213f24879363ed1f6fdc.js?body=1" for ::1 at 2015-02-01 19:13:10 -0800
+
+
+Started GET "/assets/reset-a2a01a7ddaee5e300fa3e6dcd0d55c77.css?body=1" for ::1 at 2015-02-01 19:13:10 -0800
+
+
+Started GET "/assets/application-71d71005c9a0c7761daf7f9243fe6926.js?body=1" for ::1 at 2015-02-01 19:13:10 -0800
+
+
+Started GET "/assets/jquery_ujs-0b8f09cf5aec4ba1be1abd9f915c77e2.js?body=1" for ::1 at 2015-02-01 19:13:10 -0800
+
+
+Started GET "/truefriends" for ::1 at 2015-02-01 19:13:20 -0800
+Processing by FriendsController#truefriends as */*
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mFriendship Load (1.7ms)[0m  [1mSELECT "friendships".* FROM "friendships" WHERE "friendships"."user_id" = $1 AND "friendships"."status" = 't'[0m  [["user_id", 1]]
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 6]]
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 7]]
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 3]]
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 4]]
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 8]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  Rendered friends/_friendslist.html.erb (3.8ms)
+Completed 200 OK in 21ms (Views: 12.1ms | ActiveRecord: 3.5ms)
+
+
+Started GET "/requests" for ::1 at 2015-02-01 19:13:21 -0800
+Processing by FriendsController#requests as */*
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mFriendship Load (1.1ms)[0m  [1mSELECT "friendships".* FROM "friendships" WHERE "friendships"."friend_id" = $1 AND "friendships"."status" IS NULL[0m  [["friend_id", 1]]
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 5]]
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 9]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  Rendered friends/_friendslist.html.erb (1.4ms)
+Completed 200 OK in 14ms (Views: 9.0ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/search?utf8=%E2%9C%93&email=hangyeolryu%40gmail.com" for ::1 at 2015-02-01 19:15:46 -0800
+Processing by FriendsController#search as */*
+  Parameters: {"utf8"=>"✓", "email"=>"hangyeolryu@gmail.com"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."email" = $1  [["email", "hangyeolryu@gmail.com"]]
+  Rendered friends/_friendslist.html.erb (2.8ms)
+Completed 200 OK in 14ms (Views: 13.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/search?utf8=%E2%9C%93&email=" for ::1 at 2015-02-01 19:15:48 -0800
+Processing by FriendsController#search as */*
+  Parameters: {"utf8"=>"✓", "email"=>""}
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."email" = $1[0m  [["email", ""]]
+  Rendered friends/_friendslist.html.erb (1.2ms)
+Completed 200 OK in 10ms (Views: 9.2ms | ActiveRecord: 0.4ms)

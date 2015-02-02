@@ -105,6 +105,23 @@ h3{
   font-size: 1em;
 }
 
+#intro{
+  font-family: 'Abel', sans-serif;
+  font-size: 3em;
+  margin-top: 5em;
+  font-weight: 1000;
+  font-weight: bolder;
+  text-decoration: bold;
+  /*-webkit-text-stroke: 0.001px #5B80B0;*/
+  color: white;
+  text-shadow:
+      2.5px 2.5px 1px #5A7AA3,
+    -1px -1px 1px #5A7AA3,
+     1px -1px 1px #5A7AA3,
+     -1px 1px 1px #5A7AA3,
+      2px 2px 1px #5A7AA3;
+}
+
 
 
 #value_words{
