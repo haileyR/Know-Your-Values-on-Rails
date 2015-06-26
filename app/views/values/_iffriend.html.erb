@@ -3,7 +3,8 @@
 </div>
 
 <div id='possiblevalues'>
-  <h3>click to add to <%= friend.first_name %>'s value list</h3>
+  <h3>* Example values are listed below *</h3>
+  <h3>Please click to add to <%= friend.first_name %>'s value list</h3>
   <%= render partial: 'values/possiblevalues', locals: {moreValues: moreValues, friend: friend} %>
 
   <%= button_tag 'More Values',  method: :get, action: "/friend/#{friend.id}/values", id: 'morevalue_button' %>
